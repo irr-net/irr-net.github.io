@@ -1,0 +1,38 @@
+<H3>Overview of the IRR</H3>
+
+<A NAME = "intro"><H4>Introduction</H4></A>
+
+  The Internet Routing Registry (IRR) is a distributed routing
+database development effort.  Data from the Internet Routing
+Registry may be used by anyone worldwide to help debug,
+configure, and engineer Internet routing and addressing.
+The IRR provides a mechanism for validating the contents of
+BGP announcement messages or mapping an origin AS number to a list
+of networks.<P>
+
+The IRR emerged early in 1995, a time when providers worldwide were
+preparing for the end of the NSFNET Backbone
+Service and the birth of the commercial Internet.
+A current list of databases in the IRR can be found <A
+href="../docs/list.html">here.</A><P>
+
+<A NAME = "data"><H4>Obtaining IRR Data</H4></A>
+
+ Routing data from the entire global registry may be obtained by entering
+'whois' commands such as:
+
+<PRE>
+	  whois -h whois.radb.net &lt;network_IP&gt;
+	  whois -h whois.radb.net AS&lt;Autonomous_System_Number&gt;
+</PRE>
+You can also obtain IRR data through FTP from <A
+href="ftp://ftp.radb.net/radb/dbase">
+ftp://ftp.radb.net/radb/dbase</A> or access it indirectly
+through the use of free user <A HREF="http://www.radb.net/resources/">resources.</A><P>
+
+<A NAME = "tools"><H4>IRRToolSet</H4></A>
+
+The IRRToolSet is now available from Github at the <A href="https://github.com/irrtoolset/irrtoolset">IRRToolSet project page.</A> 
+<BR><BR>
+Also see <A HREF="http://www.radb.net/support/">RADb support.</A>
+<P>

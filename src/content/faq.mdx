@@ -1,0 +1,191 @@
+<Title>FAQ: Why Use a Routing Registry?</TITLE> 
+<!--#include virtual="/header/header.shtml"-->
+
+<H3>FAQ: Why Use a Routing Registry?</H3>
+
+A thread that appeared on the NANOG email list during fall 2000 raised the
+question, "why should I bother to register in the RADB?"  We've posted
+some of the responses here, for those of you've asked yourselves
+the
+same question.<P>
+<HR>
+<pre>
+From oberman@es.net Thu Nov  9 09:21:54 2000
+Date: Wed, 25 Oct 2000 16:21:23 -0700
+From: Kevin Oberman <oberman@es.net>
+To: Todd Caine <todd_caine@eli.net>
+Cc: nanog@merit.edu
+Subject: Re: Route Registry: who uses them? 
+
+
+> Date: Wed, 25 Oct 2000 14:39:01 -0700
+> From: "Todd Caine" <todd_caine@eli.net>
+> Sender: owner-nanog@merit.edu
+> 
+> 
+> I've been talking with our router geeks and we have been
+> debating over the usefulness of route registries.  We were
+> asked recently on an application for peering if we consult
+> RADB, and our response was, "We have used it although it's
+> not up to date; Why do you use it?", and we received no
+> response.  In my experience, I've never heard of any cases
+> where it has been used.
+
+OK. We use it. If you peer with ESnet you must register 
+routes or we will not accept them. If you wonder why, 
+ask Randy Bush. (He has made the pitch for prefix filtering 
+at several NANOG meetings.) I might mention that the AS707 
+goof had no impact on us because of this filtering.
+
+Beyond this, the peering agreement with at least one 
+major network mandates that you register routes if you 
+want to peer with them and that you filter. 
+
+<snip>
+
+> Who should use Route Registries?  Why?
+
+Anyone who peers at public peering points. If you have 
+customers who want to reach any of our sites (and these 
+include most of the major US Government research laboratories), 
+you need to register or use one of the big transit 
+providers which we don't filter.
+
+On a more pragmatic level, it provides information to 
+troubleshooting failures. If a customer reports that 
+he can't reach 10.1.1.1 and it's not registered, it takes 
+a LOT longer to figure out who to call to resolve the problem.
+
+> Is it worth the time?
+
+The time is pretty minimal as long as you don't get behind. 
+It's just a standard part of setting up a new prefix in our 
+network. Takes only a couple of minutes.
+ 
+> Do people trust that the information is accurate enough to
+> let a route server automate establishing your peering
+> sessions?  Is there a limit to the detail that you should
+> provide?
+
+Yes. We do many peerings with providers via the route servers
+with good results. The only problem is when a provider stops
+registering his nets and RA peers can't get there.
+
+Detail? All you REALLY need is an AS-SET defining what 
+ASes you provide transit for, a maintainer object to allow 
+updates to other objects, an inet-rtr object telling the 
+route servers who to talk to and whether to add the RS AS 
+to the path or not, and a record for each prefix you announce. 
+The aut-num object is a good idea, but I don't use it to 
+generate policy, so I don't really care if it is there. 
+I use it most for troubleshooting. Since we are non-commercial, 
+we are probably more willing than most to disclose the
+details of our peerings.
+
+> I've looked at some of the information that other providers
+> have put in the route registry, but nothing really seemed
+> all that useful to us.  Would anyone agree or disagree?
+
+It's useful to me and my organization.
+
+> Am I missing something here?
+
+I think so.
+
+R. Kevin Oberman, Network Engineer
+Energy Sciences Network (ESnet)
+Ernest O. Lawrence Berkeley National Laboratory (Berkeley Lab)
+
+<HR>
+<PRE>
+From jeffhaas@merit.edu Wed Nov  8 17:02:29 2000
+Date: Wed, 25 Oct 2000 19:57:41 -0400
+From: Jeff Haas <jeffhaas@merit.edu>
+To: NANOG <nanog@merit.edu>
+Subject: Re: Route Registry: who uses them?
+
+
+On Wed, Oct 25, 2000 at 02:39:01PM -0700, Todd Caine wrote:
+> I've been talking with our router geeks and we have been
+> debating over the usefulness of route registries.
+
+You wouldn't be the first. :-)
+
+> Who should use Route Registries?  Why?
+> Is it worth the time?
+
+In an ideal world, everyone would register their routes, 
+their policies, their contact info and their PGP keys in 
+the RR's.
+
+Lets talk reality.
+
+For a large number of the people using the routing 
+registries - not necessarily the RADB - they are best 
+used for filtering routing announcements along your edges.  
+In this case, your clients register the routes they 
+are going to be sending you and then you filter based 
+on registered routes.  This prevents OOPS.
+
+(Note that I said registered routes - not policy.)
+
+In the case where you have two providers who wish to exchange
+a limited set of routing data with each other - i.e. not a 
+transit connection to the whole Internet - you can register 
+your routes and filter each other.  Again, this prevents OOPS.
+
+To reduce this to its component issues:
+
+1. I want to filter someone.
+   This prevents an accident in their network from be propogated
+   propagated through mine.
+2. I need a way to represent the things to filter.
+   RPSL provides a standardized way to do this.
+3. Ideally, the people I'm filtering will be able to see my 
+   filtering criteria.  Possibly, they should be allowed to 
+   update the list of the networks we accept from them.
+   IRRd, etc. permits whois access to the policy and the 
+   ability to update it.
+4. I want to generate my filters programmatically.
+   RtConfig, et alia will do this from IRRd.
+
+You can't sanely expect to filter the Internet through IRRd 
+right now, too much of the data is (to quote someone at NANOG) "grot".
+
+However, if both parties register the data for their nets in the RADB,
+it saves them the grief of setting up their own IRR repository.
+
+If you setup your own repository and get it mirrored, you 
+provide your info to the Internet at large, possibly helping 
+others solve operational issues with your net.
+
+-- 
+Jeffrey Haas - Merit RSng project - jeffhaas@merit.edu
+</PRE>
+<HR>
+<PRE>
+Date: Wed, 25 Oct 2000 19:56:20 -0400 (EDT)
+From: Charles Sprickman <spork@inch.com>
+To: Kevin Oberman <oberman@es.net>
+Cc: Todd Caine <todd_caine@eli.net>, nanog@merit.edu
+Subject: Re: Route Registry: who uses them? 
+
+&lt;snip&gt;
+
+And if you haven't been to radb.net lately, the How-To's are
+an excellent place to start.  There is also a new java tool
+to send objects in or edit objects if you prefer pointing and 
+clicking.  I was able to move to pgp auth on our objects in 
+about 15 minutes using the directions posted on the site.
+
+All in all, I found it pretty painless to register our info.
+We don't publically peer with anyone (yet), but it seemed
+like a good idea to put all the info on our AS in the radb
+and give people another place to find up-to-date contact
+information.
+
+In other words, I see no reason *not* to register your AS,
+maintainer and route objects there...
+
+Charles Sprickman
+</PRE>
