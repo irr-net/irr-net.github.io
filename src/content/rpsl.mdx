@@ -1,0 +1,57 @@
+
+	
+RPSL Reference Guide
+It is not possible to cover the features of RPSL in this document. However, you'll find references here to several RFC's that will help you get started with the specification. Unfortunately, due to the nature of RFCs and other standards documentation, they are not the most exciting things to read. We hope to be able to produce more user-oriented documentation in the future.
+
+We have provided a color-coded rating system based on what we believe is useful:
+
+    Highly Recommended Reading
+    Recommended reading
+    Optional reading
+
+RFC-1786: RIPE-181
+    Recommended reading
+
+    RIPE-181 (RIPE-81++) started it all. This document describes the original database formats used by the RIPE NCC for the storage of routing policy in its database. This document is a worthwhile read simply because it explains some things more clearly than the RPSL RFC. However, the format of various objects has changed, so one shouldn't pay too much attention to too many details.
+
+    It is important to remember that RIPE serves as a combination of an address registry, much like ARIN, and a domain registry, much like InterNIC. As such, the RIPE database contains non-routing oriented objects.
+
+    Additional documentation on the contents of the RIPE database can be found at the RIPE Document Store.
+
+    If you mirror the RIPE database, it should be noted that while the initial seeding of the database can be done from the DB file stored on the RIPE FTP site (see the The RADB Routing Registry List), it is desirable to filter the contents of the RIPE database for just the routing-related entries. This can be done using the ripe_subset.pl script included with the IRRd distribution. IRRd should use the irr_database db-name filter routing-registry-objects option to extract only routing objects from the mirror stream.
+
+RFC-2622: Routing Policy Specification Language
+    Highly Recommended Reading
+
+    The current routing language used by IRRd and by RsConfig. Certain ambiguities in the RIPE-181 language have been dealt with, such as the inter-as attribute (happily gone). This document should only require a couple of read-throughs for the average user. RFC-2650 goes with this to help provide explanations on day-to-day use of RPSL.
+
+    RPSL is much more expressive with regards to routing policy than RIPE-181. This explains much of the complexity of the latter part of the document.
+
+RFC-2650: Using RPSL in Practice
+    Highly Recommended Reading
+
+    A definite must read for people new to RPSL. This tutorial gives many examples of common policies in RPSL.
+
+RFC-2726: PGP Authentication for RIPE Database Updates
+    Recommended reading
+
+    Although RPSL-Security is the next document in the series, we list this RFC before it. RFC-2726 explains how to store PGP public keys within the RIPE database format, and by extension, the RPSL database format. RPSL makes use of PGP-signed transactions for security. The RPSL-Security RFC makes heavy use of the objects described in this RFC.
+
+RFC-2725: Routing Policy System Security
+    Optional reading
+
+    The RPSL-Security specification provides a mechanism for delegating objects and providing a rooted (top-down) delegation and authentication model for objects such as AS numbers, address space and routes. This will bring some sanity to the data stored in the public IRR databases.
+
+    Status: IRRd does not yet support this RFC.
+
+RFC-2769: Routing Policy System Replication
+    Optional reading
+
+    This mechanism provides for a more robust and authenticated mechanism of distributing data from registry to registry. The current RIPE methology uses a pull mechanism and RPSL-Replication also provides for initial object submissions and provides a push mechanism for registries.
+
+    Status: IRRd does not yet support this RFC.
+
+RFC-4012: Routing Policy Specification Language next generation (RPSLng)
+    Recommended reading
+
+    This memo introduces a new set of simple extensions to the Routing Policy Specification Language (RPSL), enabling the language to document routing policies for the IPv6 and multicast address families currently used in the Internet.
