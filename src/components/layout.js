@@ -1,6 +1,8 @@
 import * as React from 'react'
 import { Link } from 'gatsby'
 
+import './../reset.css'
+
 const Layout = ({ pageTitle, children }) => {
   return (
     <>
