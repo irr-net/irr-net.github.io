@@ -1,0 +1,24 @@
+.site-container, header, footer {
+    display: flex;
+    padding-block: 15px;
+    max-width: 1400px;
+    margin: auto;
+}
+
+.aside {
+
+}
+
+.nav-container {
+    display: grid;
+    grid-auto-columns: 1fr;
+
+}
+
+.main-container {
+
+}
+
+.nav-menu {
+    display: grid;
+}

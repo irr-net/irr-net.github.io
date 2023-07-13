@@ -18,7 +18,7 @@ const IrrOverviewPage = () => {
         The IRR emerged early in 1995, a time when providers worldwide were
         preparing for the end of the NSFNET Backbone Service and the birth of
         the commercial Internet. A current list of databases in the IRR can be
-        found <Link to="/registry-list"></Link>here.
+        found <Link to="/registry"></Link>here.
       </p>
       <h2>Obtaining IRR Data</h2>
       <p>
@@ -26,8 +26,10 @@ const IrrOverviewPage = () => {
         'whois' commands such as:{" "}
       </p>
       <pre>
-        {`whois -h whois.radb.net <network_IP>`}
-        {`whois -h whois.radb.net AS<Autonomous_System_Number>`}
+        {`        whois -h whois.radb.net <network_IP>`}
+      </pre>
+      <pre>
+        {`        whois -h whois.radb.net AS<Autonomous_System_Number>`}
       </pre>
       <p>
         You can also obtain IRR data through FTP from{" "}
