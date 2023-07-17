@@ -6,11 +6,11 @@ import "./../site.css";
 
 const Layout = ({ pageTitle, children }) => {
   return (
-    <>
+    <div className="site-body">
       <header>
         <div>Logo & Stuff</div>
       </header>
-      <div className="site-container">
+      <div className="content">
         <div className="aside">
           <nav className="nav-container">
             <ul className="nav-menu">
@@ -40,13 +40,15 @@ const Layout = ({ pageTitle, children }) => {
           {children}
         </main>
       </div>
-      <footer className="footer">
-        <p>
-          IRR is provided by Merit Network Inc. 880 Technology Drive, Suite B,
-          Ann Arbor, MI 48108-8963 734-527-5776 radb@merit.edu Copyright © 2018
-        </p>
+      <footer>
+        <div className="footer-content">
+          <p>
+            IRR is provided by Merit Network Inc. 880 Technology Drive, Suite B,
+            Ann Arbor, MI 48108-8963 734-527-5776 radb@merit.edu Copyright © 2018
+          </p>
+        </div>
       </footer>
-    </>
+    </div>
   );
 };
 
