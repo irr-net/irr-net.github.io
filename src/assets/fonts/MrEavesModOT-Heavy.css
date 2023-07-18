@@ -1,0 +1,8 @@
+@font-face {
+  font-family: 'MrEavesModOT-Heavy';
+  src: url(output/MrEavesModOT-Heavy.eot);
+  src: url(output/MrEavesModOT-Heavy.eot?#iefix) format('embedded-opentype'),
+       url(output/MrEavesModOT-Heavy.ttf) format('truetype'),
+       url(output/MrEavesModOT-Heavy.woff) format('woff'),
+       url(output/MrEavesModOT-Heavy.woff2) format('woff2');
+}
