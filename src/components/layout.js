@@ -2,7 +2,7 @@ import * as React from "react";
 import { Link } from "gatsby";
 
 import "./../reset.css";
-import "./../site.css";
+import "./../style.scss";
 
 const Layout = ({ pageTitle, children }) => {
   return (

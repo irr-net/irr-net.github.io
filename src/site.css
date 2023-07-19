@@ -5,13 +5,13 @@
 
 .site-body {
   margin: 0;
-  font-family: var(--ff-body);
-  font-size: 1.125em;
+  /* font-family: var(--ff-body); */
+  /* font-size: 1.125em;
   background: white;
 
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
+  flex-direction: column; */
 }
 
 header {
