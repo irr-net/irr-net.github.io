@@ -42,10 +42,22 @@ const Layout = ({ pageTitle, children }) => {
       </div>
       <footer>
         <div className="footer-content">
-          <p>
-            IRR is provided by Merit Network Inc. 880 Technology Drive, Suite B,
-            Ann Arbor, MI 48108-8963 734-527-5776 radb@merit.edu Copyright © 2018
-          </p>
+          <div>
+            <p>© 2023 Merit Network, Inc</p>
+          </div>
+          <hr />
+          <div className="footer-info">
+            <div>
+              <p>880 Technology Drive,</p>
+              <p>Suite B, </p>
+              <p>Ann Arbor, MI 48108-8963</p>
+            </div>
+            <div>
+              <p><strong>Contact & Support:</strong></p>
+              <p>Tel: +1 734 527 5776</p>
+              <p>Email: <a href="mailto:radb@merit.edu">radb@merit.edu</a></p>
+            </div>
+          </div>
         </div>
       </footer>
     </div>

@@ -1,6 +1,6 @@
 .site-body {
     margin: 0;
-    font-size: 1.125em;
+    font-size: 1.125rem;
     background: white;
   
     min-height: 100vh;
@@ -18,7 +18,7 @@
     position: sticky;
     top: 0;
     /* z-index: 1; */
-    background: lightgreen;
+    // background: lightgreen;
   }
   
   .content {
@@ -35,7 +35,7 @@
     min-width: 250px;
     position: sticky;
     top: 6em;
-    background: pink;
+    // background: pink;
   }
   
   .nav-container {
@@ -53,13 +53,40 @@
   
   footer {
     margin-top: auto;
+    background-color: #304C58;
+  }
+
+  hr {
+    width: 100%;
+    height: 0.0125rem;
+    background-color: #00FFFF;
   }
   
   .footer-content {
     display: flex;
-    padding-inline: 2em;
-    padding-block: 1em;
-    max-width: min(80%, 1400px);
+    flex-direction: column;
+    width: min(80%, 1400px);
+    padding-inline: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
     margin: auto;
+
+    .footer-info {
+      display: flex;
+
+      div {
+        width: 50%;
+      }
+    }
+
+    p {
+      font-size: .85rem;
+      margin-block: .25rem;
+      color: white;
+
+      strong {
+        font-weight: 700;
+      }
+    }
   }
   
