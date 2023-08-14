@@ -70,7 +70,7 @@ footer {
 hr {
   width: 100%;
   height: 0.0125rem;
-  background-color: #00ffff;
+  background-color: $teal-accent;
 }
 
 .footer-content {
@@ -90,10 +90,14 @@ hr {
     }
   }
 
+  a {
+    color: $teal-accent;
+  }
+
   p {
     font-size: 0.85rem;
     margin-block: 0.25rem;
-    color: white;
+    color: $white;
 
     strong {
       font-weight: 700;
