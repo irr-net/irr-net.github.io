@@ -6,3 +6,9 @@ a {
     text-decoration: underline;
   }
 }
+
+hr {
+  width: 100%;
+  height: 0.0125rem;
+  background-color: $teal-accent;
+}

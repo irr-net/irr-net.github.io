@@ -53,7 +53,7 @@ header {
   }
 }
 
-/* Main Content */
+// Main Content
 .main-container {
   width: max(1200px, 85%);
 }
@@ -67,12 +67,7 @@ footer {
   background-color: #304c58;
 }
 
-hr {
-  width: 100%;
-  height: 0.0125rem;
-  background-color: $teal-accent;
-}
-
+// Footer
 .footer-content {
   display: flex;
   flex-direction: column;
