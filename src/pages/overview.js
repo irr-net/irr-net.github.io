@@ -2,7 +2,7 @@ import * as React from "react";
 import Layout from "../components/layout";
 import { Link } from "gatsby";
 
-const IrrOverviewPage = () => {
+const OverviewPage = () => {
   return (
     <Layout pageTitle={"Overview"}>
       <h2>Introduction</h2>
@@ -32,20 +32,15 @@ const IrrOverviewPage = () => {
         {`        whois -h whois.radb.net AS<Autonomous_System_Number>`}
       </pre>
       <p>
-        You can also obtain IRR data through FTP from{" "}
-        <Link to=" ftp://ftp.radb.net/radb/dbase">
-          ftp://ftp.radb.net/radb/dbase
-        </Link>{" "}
-        or access it indirectly through the use of free user{" "}
+        You can also obtain IRR data through FTP from <a href=" ftp://ftp.radb.net/radb/dbase" rel="noreferrer">ftp://ftp.radb.net/radb/dbase</a> or access it indirectly through the use of free user{" "}
         <Link to="/404">resources</Link>.
       </p>
       <h2>IRRToolSet</h2>
-      <p>The IRRToolSet is now available from Github at the <Link to="https://github.com/irrtoolset/irrtoolset">IRRToolSet project page</Link>.</p>
-      {/* p*30>lorem */}
+      <p>The IRRToolSet is now available from Github at the <a href="https://github.com/irrtoolset/irrtoolset" target="_blank" rel="noreferrer">IRRToolSet project page</a>.</p>
     </Layout>
   );
 };
 
 export const Head = () => <title>IRR | Overview</title>;
 
-export default IrrOverviewPage;
+export default OverviewPage;

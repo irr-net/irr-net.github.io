@@ -2,15 +2,15 @@ import * as React from "react";
 import { Link } from "gatsby";
 
 import "./../reset.css";
-import "./../site.css";
+import "./../style.scss";
 
 const Layout = ({ pageTitle, children }) => {
   return (
-    <div className="site-body">
+    <div className="main-layout">
       <header>
-        <div>Logo & Stuff</div>
+        <div className="header-container"><p className="logo-text">IRR | Merit</p></div>
       </header>
-      <div className="content">
+      <div className="site-content">
         <div className="aside">
           <nav className="nav-container">
             <ul className="nav-menu">
@@ -18,7 +18,7 @@ const Layout = ({ pageTitle, children }) => {
                 <Link to="/">Home</Link>
               </li>
               <li>
-                <Link to="/irr-overview">Overview</Link>
+                <Link to="/overview">Overview</Link>
               </li>
               <li>
                 <Link to="/registry">Registry List</Link>
@@ -30,7 +30,7 @@ const Layout = ({ pageTitle, children }) => {
                 <Link to="/faqs">FAQs</Link>
               </li>
               <li>
-                <Link to="http://www.radb.net/support/">Support</Link>
+                <a href="http://www.radb.net/support/" target="_blank"  rel="noreferrer">Support</a>
               </li>
             </ul>
           </nav>
@@ -42,10 +42,22 @@ const Layout = ({ pageTitle, children }) => {
       </div>
       <footer>
         <div className="footer-content">
-          <p>
-            IRR is provided by Merit Network Inc. 880 Technology Drive, Suite B,
-            Ann Arbor, MI 48108-8963 734-527-5776 radb@merit.edu Copyright © 2018
-          </p>
+          <div>
+            <p><strong>© 2023 Merit Network, Inc</strong></p>
+          </div>
+          <hr />
+          <div className="footer-info">
+            <div>
+              <p><strong>Address:</strong></p>
+              <p>880 Technology Drive, Suite B, </p>
+              <p>Ann Arbor, MI 48108-8963</p>
+            </div>
+            <div>
+              <p><strong>Contact & Support:</strong></p>
+              <p>Tel: +1 734 527 5776</p>
+              <p>Email: <a href="mailto:radb@merit.edu">radb@merit.edu</a></p>
+            </div>
+          </div>
         </div>
       </footer>
     </div>

@@ -1,0 +1,8 @@
+@font-face {
+  font-family: 'MrEavesModOT-BookItalic';
+  src: url(output/MrEavesModOT-BookItalic.eot);
+  src: url(output/MrEavesModOT-BookItalic.eot?#iefix) format('embedded-opentype'),
+       url(output/MrEavesModOT-BookItalic.ttf) format('truetype'),
+       url(output/MrEavesModOT-BookItalic.woff) format('woff'),
+       url(output/MrEavesModOT-BookItalic.woff2) format('woff2');
+}
