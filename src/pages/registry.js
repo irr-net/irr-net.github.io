@@ -17,7 +17,7 @@ const RegistryListPage = () => {
 };
 
 const TableOfContent = () => (
-  <div class="table-of-contents">
+  <div class="toc">
     <ul>
       <il>
         <Link to="#AFRINIC">AFRINIC</Link>

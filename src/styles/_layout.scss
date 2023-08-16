@@ -62,12 +62,18 @@ header {
   display: grid;
 }
 
+// page table of contents
+.toc {
+  width: 18rem;
+  position: sticky;
+}
+
+// Footer
 footer {
   margin-top: auto;
   background-color: #304c58;
 }
 
-// Footer
 .footer-content {
   display: flex;
   flex-direction: column;
