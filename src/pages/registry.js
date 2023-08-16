@@ -11,13 +11,15 @@ const RegistryListPage = () => {
         contact information.
       </p>
       <hr />
+      <div className="registry-list">
+      </div>
       <TableOfContent />
     </Layout>
   );
 };
 
 const TableOfContent = () => (
-  <div class="toc">
+  <div className="table-of-contents">
     <ul>
       <il>
         <Link to="#AFRINIC">AFRINIC</Link>
