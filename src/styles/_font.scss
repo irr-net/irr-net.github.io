@@ -1,203 +1,209 @@
-/**
- * Fonts
- *
- * WARN: Only use/enable as needed.
- */
+// Fonts
 
+$f-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
+  sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 
- $f-sans-serif   : -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+$f-icon-brands: "Font Awesome 5 Brands";
+$f-icon-material: "Material Icons";
+$f-mr-eaves: "MrEavesModOT", $f-sans-serif;
+$f-open-sans: "Open Sans", $f-sans-serif;
 
- $f-icon-brands   : 'Font Awesome 5 Brands';
- $f-icon-material : 'Material Icons';
- $f-mr-eaves      : 'MrEavesModOT', $f-sans-serif;
- $f-open-sans     : 'Open Sans',    $f-sans-serif;
- 
- 
- @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,700');
- @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
- 
- @font-face {
-   font-family: 'Font Awesome 5 Brands';
-   font-style: normal;
-   font-weight: normal;
-   font-display: auto;
-   src: url('./assets/fonts/fa-brands-400.woff2') format('woff2'),
-        url('./assets/fonts/fa-brands-400.woff') format('woff'),
-        url('./assets/fonts/fa-brands-400.ttf') format('truetype'),
-        url('./assets/fonts/fa-brands-400.eot') format('embedded-opentype');
- }
- 
- @font-face {
-   font-display: fallback;
-   font-family: 'MrEavesModOT';
-   font-style: normal;
-   font-weight: 100;
-   src: url('./assets/fonts/MrEavesModOT-Thin.woff2') format('woff2'),
-        url('./assets/fonts/MrEavesModOT-Thin.woff') format('woff'),
-        url('./assets/fonts/MrEavesModOT-Thin.ttf') format('truetype'),
-        url('./assets/fonts/MrEavesModOT-Thin.eot') format('embedded-opentype');
- }
- 
- @font-face {
-   font-display: fallback;
-   font-family: 'MrEavesModOT';
-   font-style: italic;
-   font-weight: 100;
-   src: url('./assets/fonts/MrEavesModOT-ThinItalic.woff2') format('woff2'),
-        url('./assets/fonts/MrEavesModOT-ThinItalic.woff') format('woff'),
-        url('./assets/fonts/MrEavesModOT-ThinItalic.ttf') format('truetype'),
-        url('./assets/fonts/MrEavesModOT-ThinItalic.eot') format('embedded-opentype');
- }
- 
- @font-face {
-   font-display: fallback;
-   font-family: 'MrEavesModOT';
-   font-style: normal;
-   font-weight: 200;
-   src: url('./assets/fonts/MrEavesModOT-Light.woff2') format('woff2'),
-        url('./assets/fonts/MrEavesModOT-Light.woff') format('woff'),
-        url('./assets/fonts/MrEavesModOT-Light.ttf') format('truetype'),
-        url('./assets/fonts/MrEavesModOT-Light.eot') format('embedded-opentype');
- }
- 
- @font-face {
-   font-display: fallback;
-   font-family: 'MrEavesModOT';
-   font-style: italic;
-   font-weight: 200;
-   src: url('./assets/fonts/MrEavesModOT-LightItalic.woff2') format('woff2'),
-        url('./assets/fonts/MrEavesModOT-LightItalic.woff') format('woff'),
-        url('./assets/fonts/MrEavesModOT-LightItalic.ttf') format('truetype'),
-        url('./assets/fonts/MrEavesModOT-LightItalic.eot') format('embedded-opentype');
- }
- 
- @font-face {
-   font-display: fallback;
-   font-family: 'MrEavesModOT';
-   font-style: normal;
-   font-weight: 300;
-   src: url('./assets/fonts/MrEavesModOT-Book.woff2') format('woff2'),
-        url('./assets/fonts/MrEavesModOT-Book.woff') format('woff'),
-        url('./assets/fonts/MrEavesModOT-Book.ttf') format('truetype'),
-        url('./assets/fonts/MrEavesModOT-Book.eot') format('embedded-opentype');
- }
- 
- @font-face {
-   font-display: fallback;
-   font-family: 'MrEavesModOT';
-   font-style: italic;
-   font-weight: 300;
-   src: url('./assets/fonts/MrEavesModOT-BookItalic.woff2') format('woff2'),
-        url('./assets/fonts/MrEavesModOT-BookItalic.woff') format('woff'),
-        url('./assets/fonts/MrEavesModOT-BookItalic.ttf') format('truetype'),
-        url('./assets/fonts/MrEavesModOT-BookItalic.eot') format('embedded-opentype');
- }
- 
- @font-face {
-   font-display: fallback;
-   font-family: 'MrEavesModOT';
-   font-style: normal;
-   font-weight: 400;
-   src: url('./assets/fonts/MrEavesModOT-Reg.woff2') format('woff2'),
-        url('./assets/fonts/MrEavesModOT-Reg.woff') format('woff'),
-        url('./assets/fonts/MrEavesModOT-Reg.ttf') format('truetype'),
-        url('./assets/fonts/MrEavesModOT-Reg.eot') format('embedded-opentype');
- }
- 
- @font-face {
-   font-display: fallback;
-   font-family: 'MrEavesModOT';
-   font-style: italic;
-   font-weight: 400;
-   src: url('./assets/fonts/MrEavesModOT-RegItalic.woff2') format('woff2'),
-        url('./assets/fonts/MrEavesModOT-RegItalic.woff') format('woff'),
-        url('./assets/fonts/MrEavesModOT-RegItalic.ttf') format('truetype'),
-        url('./assets/fonts/MrEavesModOT-RegItalic.eot') format('embedded-opentype');
- }
- 
- @font-face {
-   font-display: fallback;
-   font-family: 'MrEavesModOT';
-   font-style: normal;
-   font-weight: 700;
-   src: url('./assets/fonts/MrEavesModOT-Bold.woff2') format('woff2'),
-        url('./assets/fonts/MrEavesModOT-Bold.woff') format('woff'),
-        url('./assets/fonts/MrEavesModOT-Bold.ttf') format('truetype'),
-        url('./assets/fonts/MrEavesModOT-Bold.eot') format('embedded-opentype');
- }
- 
- @font-face {
-   font-display: fallback;
-   font-family: 'MrEavesModOT';
-   font-style: italic;
-   font-weight: 700;
-   src: url('./assets/fonts/MrEavesModOT-BoldItalic.woff2') format('woff2'),
-        url('./assets/fonts/MrEavesModOT-BoldItalic.woff') format('woff'),
-        url('./assets/fonts/MrEavesModOT-BoldItalic.ttf') format('truetype'),
-        url('./assets/fonts/MrEavesModOT-BoldItalic.eot') format('embedded-opentype');
- }
- 
- @font-face {
-   font-display: fallback;
-   font-family: 'MrEavesModOT';
-   font-style: normal;
-   font-weight: 900;
-   src: url('./assets/fonts/MrEavesModOT-Heavy.woff2') format('woff2'),
-        url('./assets/fonts/MrEavesModOT-Heavy.woff') format('woff'),
-        url('./assets/fonts/MrEavesModOT-Heavy.ttf') format('truetype'),
-        url('./assets/fonts/MrEavesModOT-Heavy.eot') format('embedded-opentype');
- }
- 
- @font-face {
-   font-display: fallback;
-   font-family: 'MrEavesModOT';
-   font-style: italic;
-   font-weight: 900;
-   src: url('./assets/fonts/MrEavesModOT-HeavyItalic.woff2') format('woff2'),
-        url('./assets/fonts/MrEavesModOT-HeavyItalic.woff') format('woff'),
-        url('./assets/fonts/MrEavesModOT-HeavyItalic.ttf') format('truetype'),
-        url('./assets/fonts/MrEavesModOT-HeavyItalic.eot') format('embedded-opentype');
- }
- 
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,700");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
 
- h1 {
-    font-family: $f-mr-eaves;
-    font-weight: 900;
-    font-style: normal;
-    font-size: 2.5rem;
-    margin-block: 1.5rem;
- }
+@font-face {
+  font-family: "Font Awesome 5 Brands";
+  font-style: normal;
+  font-weight: normal;
+  font-display: auto;
+  src: url("./assets/fonts/fa-brands-400.woff2") format("woff2"),
+    url("./assets/fonts/fa-brands-400.woff") format("woff"),
+    url("./assets/fonts/fa-brands-400.ttf") format("truetype"),
+    url("./assets/fonts/fa-brands-400.eot") format("embedded-opentype");
+}
 
- h2 {
-    font-family: $f-mr-eaves;
-    font-weight: 700;
-    font-style: normal;
-    font-size: 2rem;
-    margin-block: 1.25rem;
- }
+@font-face {
+  font-display: fallback;
+  font-family: "MrEavesModOT";
+  font-style: normal;
+  font-weight: 100;
+  src: url("./assets/fonts/MrEavesModOT-Thin.woff2") format("woff2"),
+    url("./assets/fonts/MrEavesModOT-Thin.woff") format("woff"),
+    url("./assets/fonts/MrEavesModOT-Thin.ttf") format("truetype"),
+    url("./assets/fonts/MrEavesModOT-Thin.eot") format("embedded-opentype");
+}
 
- h3 {
-    font-family: $f-mr-eaves;
-    font-weight: 700;
-    font-style: normal;
-    font-size: 1.5rem;
-    margin-block: 1rem;
- }
+@font-face {
+  font-display: fallback;
+  font-family: "MrEavesModOT";
+  font-style: italic;
+  font-weight: 100;
+  src: url("./assets/fonts/MrEavesModOT-ThinItalic.woff2") format("woff2"),
+    url("./assets/fonts/MrEavesModOT-ThinItalic.woff") format("woff"),
+    url("./assets/fonts/MrEavesModOT-ThinItalic.ttf") format("truetype"),
+    url("./assets/fonts/MrEavesModOT-ThinItalic.eot")
+      format("embedded-opentype");
+}
 
- h4 {
-    font-family: $f-mr-eaves;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 1.25rem;
-    margin-block: 1rem;
- }
+@font-face {
+  font-display: fallback;
+  font-family: "MrEavesModOT";
+  font-style: normal;
+  font-weight: 200;
+  src: url("./assets/fonts/MrEavesModOT-Light.woff2") format("woff2"),
+    url("./assets/fonts/MrEavesModOT-Light.woff") format("woff"),
+    url("./assets/fonts/MrEavesModOT-Light.ttf") format("truetype"),
+    url("./assets/fonts/MrEavesModOT-Light.eot") format("embedded-opentype");
+}
 
- p, li {
-    font-family: $f-open-sans;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 1.0125rem;
-    margin-top: 0.75rem;
-    margin-bottom: 1rem;
-    line-height: 1.5rem;
- }
+@font-face {
+  font-display: fallback;
+  font-family: "MrEavesModOT";
+  font-style: italic;
+  font-weight: 200;
+  src: url("./assets/fonts/MrEavesModOT-LightItalic.woff2") format("woff2"),
+    url("./assets/fonts/MrEavesModOT-LightItalic.woff") format("woff"),
+    url("./assets/fonts/MrEavesModOT-LightItalic.ttf") format("truetype"),
+    url("./assets/fonts/MrEavesModOT-LightItalic.eot")
+      format("embedded-opentype");
+}
+
+@font-face {
+  font-display: fallback;
+  font-family: "MrEavesModOT";
+  font-style: normal;
+  font-weight: 300;
+  src: url("./assets/fonts/MrEavesModOT-Book.woff2") format("woff2"),
+    url("./assets/fonts/MrEavesModOT-Book.woff") format("woff"),
+    url("./assets/fonts/MrEavesModOT-Book.ttf") format("truetype"),
+    url("./assets/fonts/MrEavesModOT-Book.eot") format("embedded-opentype");
+}
+
+@font-face {
+  font-display: fallback;
+  font-family: "MrEavesModOT";
+  font-style: italic;
+  font-weight: 300;
+  src: url("./assets/fonts/MrEavesModOT-BookItalic.woff2") format("woff2"),
+    url("./assets/fonts/MrEavesModOT-BookItalic.woff") format("woff"),
+    url("./assets/fonts/MrEavesModOT-BookItalic.ttf") format("truetype"),
+    url("./assets/fonts/MrEavesModOT-BookItalic.eot")
+      format("embedded-opentype");
+}
+
+@font-face {
+  font-display: fallback;
+  font-family: "MrEavesModOT";
+  font-style: normal;
+  font-weight: 400;
+  src: url("./assets/fonts/MrEavesModOT-Reg.woff2") format("woff2"),
+    url("./assets/fonts/MrEavesModOT-Reg.woff") format("woff"),
+    url("./assets/fonts/MrEavesModOT-Reg.ttf") format("truetype"),
+    url("./assets/fonts/MrEavesModOT-Reg.eot") format("embedded-opentype");
+}
+
+@font-face {
+  font-display: fallback;
+  font-family: "MrEavesModOT";
+  font-style: italic;
+  font-weight: 400;
+  src: url("./assets/fonts/MrEavesModOT-RegItalic.woff2") format("woff2"),
+    url("./assets/fonts/MrEavesModOT-RegItalic.woff") format("woff"),
+    url("./assets/fonts/MrEavesModOT-RegItalic.ttf") format("truetype"),
+    url("./assets/fonts/MrEavesModOT-RegItalic.eot") format("embedded-opentype");
+}
+
+@font-face {
+  font-display: fallback;
+  font-family: "MrEavesModOT";
+  font-style: normal;
+  font-weight: 700;
+  src: url("./assets/fonts/MrEavesModOT-Bold.woff2") format("woff2"),
+    url("./assets/fonts/MrEavesModOT-Bold.woff") format("woff"),
+    url("./assets/fonts/MrEavesModOT-Bold.ttf") format("truetype"),
+    url("./assets/fonts/MrEavesModOT-Bold.eot") format("embedded-opentype");
+}
+
+@font-face {
+  font-display: fallback;
+  font-family: "MrEavesModOT";
+  font-style: italic;
+  font-weight: 700;
+  src: url("./assets/fonts/MrEavesModOT-BoldItalic.woff2") format("woff2"),
+    url("./assets/fonts/MrEavesModOT-BoldItalic.woff") format("woff"),
+    url("./assets/fonts/MrEavesModOT-BoldItalic.ttf") format("truetype"),
+    url("./assets/fonts/MrEavesModOT-BoldItalic.eot")
+      format("embedded-opentype");
+}
+
+@font-face {
+  font-display: fallback;
+  font-family: "MrEavesModOT";
+  font-style: normal;
+  font-weight: 900;
+  src: url("./assets/fonts/MrEavesModOT-Heavy.woff2") format("woff2"),
+    url("./assets/fonts/MrEavesModOT-Heavy.woff") format("woff"),
+    url("./assets/fonts/MrEavesModOT-Heavy.ttf") format("truetype"),
+    url("./assets/fonts/MrEavesModOT-Heavy.eot") format("embedded-opentype");
+}
+
+@font-face {
+  font-display: fallback;
+  font-family: "MrEavesModOT";
+  font-style: italic;
+  font-weight: 900;
+  src: url("./assets/fonts/MrEavesModOT-HeavyItalic.woff2") format("woff2"),
+    url("./assets/fonts/MrEavesModOT-HeavyItalic.woff") format("woff"),
+    url("./assets/fonts/MrEavesModOT-HeavyItalic.ttf") format("truetype"),
+    url("./assets/fonts/MrEavesModOT-HeavyItalic.eot")
+      format("embedded-opentype");
+}
+
+h1 {
+  font-family: $f-mr-eaves;
+  font-weight: 900;
+  font-style: normal;
+  font-size: 2.5rem;
+  margin-block: 1.5rem;
+}
+
+h2 {
+  font-family: $f-mr-eaves;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 2rem;
+  margin-block: 1.25rem;
+}
+
+h3 {
+  font-family: $f-mr-eaves;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 1.5rem;
+  margin-block: 1rem;
+}
+
+h4 {
+  font-family: $f-mr-eaves;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.25rem;
+  margin-block: 1rem;
+}
+
+p,
+li {
+  font-family: $f-open-sans;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.0125rem;
+  margin-top: 0.75rem;
+  margin-bottom: 1rem;
+  line-height: 1.5rem;
+}
+
+pre {
+  font-family: monospace;
+  background: $light-grey;
+  padding: 1rem;
+}
