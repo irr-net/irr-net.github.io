@@ -1,8 +1,8 @@
 {
-  "name": "irr.test",
+  "name": "irr.net",
   "version": "1.0.0",
   "private": true,
-  "description": "irr.test",
+  "description": "Internet Routing Registry website public repository",
   "author": "Carl Yao Agbenyega",
   "keywords": [
     "gatsby"
