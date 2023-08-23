@@ -23,7 +23,7 @@ const RpslGuidePage = () => {
         <li>Optional reading</li>
       </ul>
       <section>
-        <h2>RFC-1786: RIPE-181</h2>
+        <Link to="/rpsl-guide/ripe-181"><h2>RFC-1786: RIPE-181</h2></Link>
         <p className="subheading">Recommended reading</p>
         <p>
         RIPE-181 (RIPE-81++) started it all. This document describes the original database formats used by the RIPE NCC for the storage of routing policy in its database. This document is a worthwhile read simply because it explains some things more clearly than the RPSL RFC. However, the format of various objects has changed, so one shouldn't pay too much attention to too many details.
@@ -33,35 +33,35 @@ const RpslGuidePage = () => {
         <p>If you mirror the RIPE database, it should be noted that while the initial seeding of the database can be done from the DB file stored on the RIPE FTP site (see the <Link to="/registry">The RADB Routing Registry List</Link>), it is desirable to filter the contents of the RIPE database for just the routing-related entries. This can be done using the <strong>ripe_subset.pl</strong> script included with the IRRd distribution. IRRd should use the <strong>irr_database db-name filter routing-registry-objects</strong> option to extract only routing objects from the mirror stream.</p>
       </section>
       <section>
-        <h2>RFC-2622: Routing Policy Specification Language</h2>
+        <Link to="/rpsl-guide/rfc2622"><h2>RFC-2622: Routing Policy Specification Language</h2></Link>
         <p className="subheading">Highly Recommended Reading</p>
         <p>The current routing language used by IRRd and by RsConfig. Certain ambiguities in the RIPE-181 language have been dealt with, such as the inter-as attribute (happily gone). This document should only require a couple of read-throughs for the average user. RFC-2650 goes with this to help provide explanations on day-to-day use of RPSL.</p>
         <p>RPSL is much more expressive with regards to routing policy than RIPE-181. This explains much of the complexity of the latter part of the document.</p>
       </section>
       <section>
-        <h2>RFC-2650: Using RPSL in Practice</h2>
+        <Link to="/rpsl-guide/rfc2650"><h2>RFC-2650: Using RPSL in Practice</h2></Link>
         <p className="subheading">Highly Recommended Reading</p>
         <p>A definite must read for people new to RPSL. This tutorial gives many examples of common policies in RPSL.</p>
       </section>
       <section>
-        <h2>RFC-2726: PGP Authentication for RIPE Database Updates</h2>
+        <Link to="/rpsl-guide/rfc2726"><h2>RFC-2726: PGP Authentication for RIPE Database Updates</h2></Link>
         <p className="subheading">Recommended reading</p>
         <p>Although RPSL-Security is the next document in the series, we list this RFC before it. RFC-2726 explains how to store PGP public keys within the RIPE database format, and by extension, the RPSL database format. RPSL makes use of PGP-signed transactions for security. The RPSL-Security RFC makes heavy use of the objects described in this RFC. </p>
       </section>
       <section>
-        <h2>RFC-2725: Routing Policy System Security</h2>
+        <Link to="/rpsl-guide/rfc2725"><h2>RFC-2725: Routing Policy System Security</h2></Link>
         <p className="subheading">Optional reading</p>
         <p>The RPSL-Security specification provides a mechanism for delegating objects and providing a rooted (top-down) delegation and authentication model for objects such as AS numbers, address space and routes. This will bring some sanity to the data stored in the public IRR databases.</p>
         <p><strong>Status</strong>: IRRd does not yet support this RFC.</p>
       </section>
       <section>
-        <h2>RFC-2769: Routing Policy System Replication</h2>
+        <Link to="/rpsl-guide/rfc2769"><h2>RFC-2769: Routing Policy System Replication</h2></Link>
         <p className="subheading">Optional reading</p>
         <p>This mechanism provides for a more robust and authenticated mechanism of distributing data from registry to registry. The current RIPE methology uses a pull mechanism and RPSL-Replication also provides for initial object submissions and provides a push mechanism for registries.</p>
         <p><strong>Status</strong>: IRRd does not yet support this RFC.</p>
       </section>
       <section>
-        <h2>RFC-4012: Routing Policy Specification Language next generation (RPSLng)</h2>
+        <Link to="/rpsl-guide/rfc4012"><h2>RFC-4012: Routing Policy Specification Language next generation (RPSLng)</h2></Link>
         <p className="subheading">Recommended reading</p>
         <p>This memo introduces a new set of simple extensions to the Routing Policy Specification Language (RPSL), enabling the language to document routing policies for the IPv6 and multicast address families currently used in the Internet.</p>
       </section>
