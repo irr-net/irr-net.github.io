@@ -9,11 +9,12 @@
 }
 
 // Header
-header {
-  position: sticky;
-  top: 0;
+.header {
+  position: fixed;
+  width: 100%;
   background-color: $white;
   border-top: 3px solid $teal-accent;
+  z-index: 1000;
 
   .header-container {
     display: flex;
