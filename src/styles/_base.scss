@@ -1,7 +1,9 @@
+@use "color";
+@use "font";
 
 
 h1 {
-  font-family: $f-mr-eaves;
+  font-family: font.$f-mr-eaves;
   font-weight: 900;
   font-style: normal;
   font-size: 2.5rem;
@@ -9,7 +11,7 @@ h1 {
 }
 
 h2 {
-  font-family: $f-mr-eaves;
+  font-family: font.$f-mr-eaves;
   font-weight: 700;
   font-style: normal;
   font-size: 2rem;
@@ -17,7 +19,7 @@ h2 {
 }
 
 h3 {
-  font-family: $f-mr-eaves;
+  font-family: font.$f-mr-eaves;
   font-weight: 700;
   font-style: normal;
   font-size: 1.5rem;
@@ -25,7 +27,7 @@ h3 {
 }
 
 h4 {
-  font-family: $f-mr-eaves;
+  font-family: font.$f-mr-eaves;
   font-weight: 400;
   font-style: normal;
   font-size: 1.25rem;
@@ -34,7 +36,7 @@ h4 {
 
 p,
 li {
-  font-family: $f-open-sans;
+  font-family: font.$f-open-sans;
   font-weight: 400;
   font-style: normal;
   font-size: 1.0125rem;
@@ -49,14 +51,14 @@ li {
 
 pre {
   font-family: monospace;
-  background: $light-grey;
+  background: color.$light-grey;
   padding: 1rem;
 }
 
 
 a {
   text-decoration: none;
-  color: $mteal;
+  color: color.$mteal;
 
   &:hover {
     text-decoration: underline;
@@ -66,5 +68,5 @@ a {
 hr {
   width: 100%;
   height: 0.0125rem;
-  background-color: $teal-accent;
+  background-color: color.$teal-accent;
 }

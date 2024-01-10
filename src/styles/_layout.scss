@@ -1,3 +1,5 @@
+@use "color";
+
 .main-layout {
   margin: 0;
   font-size: 1.125rem;
@@ -12,8 +14,8 @@
 .header {
   position: fixed;
   width: 100%;
-  background-color: $white;
-  border-top: 3px solid $teal-accent;
+  background-color: color.$white;
+  border-top: 3px solid color.$teal-accent;
   z-index: 1000;
 
   .header-container {
@@ -97,13 +99,13 @@ footer {
   }
 
   a {
-    color: $teal-accent;
+    color: color.$teal-accent;
   }
 
   p {
     font-size: 0.85rem;
     margin-block: 0.25rem;
-    color: $white;
+    color: color.$white;
 
     strong {
       font-weight: 700;
