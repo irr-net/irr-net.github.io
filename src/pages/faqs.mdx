@@ -1,15 +1,14 @@
-<Title>FAQ: Why Use a Routing Registry?</TITLE> 
-<!--#include virtual="/header/header.shtml"-->
+import Layout from "../components/layout"
 
-<H3>FAQ: Why Use a Routing Registry?</H3>
+<Layout pageTitle="FAQ: Why Use a Routing Registry?" >
 
 A thread that appeared on the NANOG email list during fall 2000 raised the
 question, "why should I bother to register in the RADB?"  We've posted
 some of the responses here, for those of you've asked yourselves
-the
-same question.<P>
-<HR>
-<pre>
+the same question.
+___
+
+```
 From oberman@es.net Thu Nov  9 09:21:54 2000
 Date: Wed, 25 Oct 2000 16:21:23 -0700
 From: Kevin Oberman <oberman@es.net>
@@ -40,8 +39,6 @@ goof had no impact on us because of this filtering.
 Beyond this, the peering agreement with at least one 
 major network mandates that you register routes if you 
 want to peer with them and that you filter. 
-
-<snip>
 
 > Who should use Route Registries?  Why?
 
@@ -95,9 +92,10 @@ I think so.
 R. Kevin Oberman, Network Engineer
 Energy Sciences Network (ESnet)
 Ernest O. Lawrence Berkeley National Laboratory (Berkeley Lab)
+```
+___
 
-<HR>
-<PRE>
+```
 From jeffhaas@merit.edu Wed Nov  8 17:02:29 2000
 Date: Wed, 25 Oct 2000 19:57:41 -0400
 From: Jeff Haas <jeffhaas@merit.edu>
@@ -161,16 +159,16 @@ others solve operational issues with your net.
 
 -- 
 Jeffrey Haas - Merit RSng project - jeffhaas@merit.edu
-</PRE>
-<HR>
-<PRE>
+```
+___
+
+```
 Date: Wed, 25 Oct 2000 19:56:20 -0400 (EDT)
 From: Charles Sprickman <spork@inch.com>
 To: Kevin Oberman <oberman@es.net>
 Cc: Todd Caine <todd_caine@eli.net>, nanog@merit.edu
 Subject: Re: Route Registry: who uses them? 
 
-&lt;snip&gt;
 
 And if you haven't been to radb.net lately, the How-To's are
 an excellent place to start.  There is also a new java tool
@@ -188,4 +186,6 @@ In other words, I see no reason *not* to register your AS,
 maintainer and route objects there...
 
 Charles Sprickman
-</PRE>
+```
+</Layout>
+export const Head = () => <title>IRR | FAQs</title>;

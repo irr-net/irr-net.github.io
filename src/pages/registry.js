@@ -11,68 +11,70 @@ const RegistryListPage = () => {
         contact information.
       </p>
       <hr />
+      <div className="registry-list">
+      </div>
       <TableOfContent />
     </Layout>
   );
 };
 
 const TableOfContent = () => (
-  <div class="table-of-contents">
+  <div className="toc">
     <ul>
-      <il>
+      <li>
         <Link to="#AFRINIC">AFRINIC</Link>
-      </il>
-      <il>
+      </li>
+      <li>
         <Link to="#ALTDB">ALTDB</Link>
-      </il>
-      <il>
+      </li>
+      <li>
         <Link to="#APNIC">APNIC</Link>
-      </il>
-      <il>
+      </li>
+      <li>
         <Link to="#ARIN">ARIN</Link>
-      </il>
-      <il>
+      </li>
+      <li>
         <Link to="#BELL">BELL</Link>
-      </il>
-      <il>
+      </li>
+      <li>
         <Link to="#BBOI">BBOI</Link>
-      </il>
-      <il>
+      </li>
+      <li>
         <Link to="#CANARIE">CANARIE</Link>
-      </il>
-      <il>
+      </li>
+      <li>
         <Link to="#IDNIC">IDNIC</Link>
-      </il>
-      <il>
+      </li>
+      <li>
         <Link to="#JPIRR">JPIRR</Link>
-      </il>
-      <il>
+      </li>
+      <li>
         <Link to="#LACNIC">LACNIC</Link>
-      </il>
-      <il>
+      </li>
+      <li>
         <Link to="#LEVEL3">LEVEL3</Link>
-      </il>
-      <il>
+      </li>
+      <li>
         <Link to="#NESTEGG">NESTEGG</Link>
-      </il>
-      <il>
+      </li>
+      <li>
         <Link to="#NTTCOM">NTTCOM</Link>
-      </il>
-      <il>
+      </li>
+      <li>
         <Link to="#PANIX">PANIX</Link>
-      </il>
-      <il>
+      </li>
+      <li>
         <Link to="#RADB">RADB</Link>
-      </il>
-      <il>
+      </li>
+      <li>
         <Link to="#REACH">REACH</Link>
-      </il>
-      <il>
+      </li>
+      <li>
         <Link to="#RIPE">RIPE</Link>
-      </il>
-      <il>
+      </li>
+      <li>
         <Link to="#TC">TC</Link>
-      </il>
+      </li>
     </ul>
   </div>
 )
