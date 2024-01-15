@@ -6,49 +6,45 @@ import "./../style.scss";
 
 const Layout = ({ pageTitle, children }) => {
   return (
-    <div className="main-layout">
+    <div className="site-wrapper">
       <header className="header">
         <div className="header-container">
           <p className="logo-text">IRR | Merit</p>
         </div>
       </header>
-      <div className="site-content">
-        <div className="aside">
-          <nav className="nav-container">
-            <ul className="nav-menu">
-              <li>
-                <Link to="/">Home</Link>
-              </li>
-              <li>
-                <Link to="/overview">Overview</Link>
-              </li>
-              <li>
-                <Link to="/registry">Registry List</Link>
-              </li>
-              <li>
-                <Link to="/rpsl-guide">RPSL Reference Guide</Link>
-              </li>
-              <li>
-                <Link to="/faqs">FAQs</Link>
-              </li>
-              <li>
-                <a
-                  href="http://www.radb.net/support/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Support
-                </a>
-              </li>
-            </ul>
-          </nav>
-        </div>
-        <main className="main-container">
-          <h1>{pageTitle}</h1>
-          {children}
-        </main>
-      </div>
-      <footer>
+      <nav className="main-nav">
+        <ul className="nav-menu">
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/overview">Overview</Link>
+          </li>
+          <li>
+            <Link to="/registry">Registry List</Link>
+          </li>
+          <li>
+            <Link to="/rpsl-guide">RPSL Reference Guide</Link>
+          </li>
+          <li>
+            <Link to="/faqs">FAQs</Link>
+          </li>
+          <li>
+            <a
+              href="http://www.radb.net/support/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Support
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <main className="content">
+        <h1>{pageTitle}</h1>
+        {children}
+      </main>
+      <footer className="footer">
         <div className="footer-content">
           <div>
             <p>

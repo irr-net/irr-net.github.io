@@ -1,17 +1,11 @@
 @use "color";
 
-.main-layout {
-  margin: 0;
-  font-size: 1.125rem;
+// Global Layout
 
-  min-height: 100vh;
-  // max-width: 100vw;
-  display: flex;
-  flex-direction: column;
-}
-
-// Header
+// Template names
+// 1. header
 .header {
+  grid-area: header;
   position: fixed;
   width: 100%;
   background-color: color.$white;
@@ -33,32 +27,61 @@
   }
 }
 
+// 2. navigation
+.main-nav {
+  grid-area: nav;
+}
+
+// 3. main content
+.content {
+  grid-area: content;
+}
+
+// 4. footer
+.footer {
+  grid-area: footer;
+}
+
+.site-wrapper {
+  display: grid;
+  gap: 1rem;
+  grid-template-areas:
+    "header"
+    "nav"
+    "content"
+    "footer";
+
+  margin: 0;
+  font-size: 1.125rem;
+  min-height: 100vh;
+}
+
 // Content
-.site-content {
-  display: flex;
-  align-items: start;
-  padding-inline: 2em;
-  padding-block: 1em;
-  width: min(90%, 1400px);
-  margin-inline: auto;
-}
+// .site-content {
+//   display: flex;
+//   align-items: start;
+//   padding-inline: 2em;
+//   padding-block: 1em;
+//   width: min(90%, 1400px);
+//   margin-inline: auto;
+// }
 
-.aside {
-  width: max(200px, 25%);
-  position: sticky;
-  top: 6em;
-  padding-top: 3rem;
+// .side-nav {
+//   width: max(200px, 25%);
+//   position: sticky;
+//   top: 6em;
+//   padding-top: 3rem;
 
-  .nav-container {
-    display: flex;
-    flex-direction: column;
-  }
-  .nav-menu {
-  }
-}
+//   .nav-container {
+//     display: flex;
+//     flex-direction: column;
+//   }
+//   .nav-menu {
+//   }
+// }
 
 // Main Content
-.main-container {
+.content {
   padding-top: 7rem;
   width: max(1200px, 85%);
 }
