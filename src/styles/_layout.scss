@@ -1,12 +1,16 @@
 @use "color";
 
 // Global Layout
+$spacing: 1rem;
+$spacing-xl: 3rem;
+
+$content-breakin-width: 900px;
 
 // Template names
 // 1. header
 .header {
   grid-area: header;
-  position: fixed;
+  // position: fixed;
   width: 100%;
   background-color: color.$white;
   border-top: 3px solid color.$teal-accent;
@@ -16,8 +20,8 @@
     display: flex;
     height: 3em;
     width: min(90%, 1400px);
-    padding-inline: 2em;
-    padding-block: 1em;
+    // padding-inline: 2em;
+    padding-block: $spacing;
     margin-inline: auto;
 
     // Logo style
@@ -30,21 +34,42 @@
 // 2. navigation
 .main-nav {
   grid-area: nav;
+  padding-inline: $spacing;
+  margin-block-start: $spacing-xl;
 }
 
 // 3. main content
 .content {
   grid-area: content;
+  padding-inline: $spacing;
 }
 
 // 4. footer
 .footer {
   grid-area: footer;
+  display: flex;
+  flex-direction: column;
+  padding-inline: $spacing;
+  padding-block-start: $spacing-xl;
+  background-color: color.$light-grey;
+
+  div {
+    margin-block: 1rem;
+  }
+
+  p,
+  li {
+    font-size: 0.85rem;
+    margin-block: 0.25rem;
+
+    strong {
+      font-weight: 700;
+    }
+  }
 }
 
 .site-wrapper {
   display: grid;
-  gap: 1rem;
   grid-template-areas:
     "header"
     "nav"
@@ -56,82 +81,25 @@
   min-height: 100vh;
 }
 
-// Content
-// .site-content {
-//   display: flex;
-//   align-items: start;
-//   padding-inline: 2em;
-//   padding-block: 1em;
-//   width: min(90%, 1400px);
-//   margin-inline: auto;
-// }
-
-// .side-nav {
-//   width: max(200px, 25%);
-//   position: sticky;
-//   top: 6em;
-//   padding-top: 3rem;
-
-//   .nav-container {
-//     display: flex;
-//     flex-direction: column;
-//   }
-//   .nav-menu {
-//   }
-// }
-
-// Main Content
-.content {
-  padding-top: 7rem;
-  width: max(1200px, 85%);
-}
-
-// Footer
-// page table of contents
-.toc {
-  width: min(25%, 18rem);
-  position: sticky;
-  margin-left: auto;
-
-  .content-list {
-    display: grid;
-  }
-}
-
-// Footer
-footer {
-  margin-top: auto;
-  background-color: #304c58;
-}
-
-.footer-content {
-  display: flex;
-  flex-direction: column;
-  width: min(90%, 1400px);
-  padding-inline: 1rem;
-  padding-top: 1rem;
-  padding-bottom: 2rem;
-  margin: auto;
-
-  .footer-info {
-    display: flex;
-
-    div {
-      width: 50%;
-    }
+// Media queries
+@media (min-width: 600px) {
+  .site-wrapper {
+    grid-template-columns: 1fr 4fr;
+    grid-template-areas:
+      "header header"
+      "nav content"
+      "footer footer";
+    width: min(100%, 1200px);
+    margin: auto;
   }
 
-  a {
-    color: color.$teal-accent;
-  }
-
-  p {
-    font-size: 0.85rem;
-    margin-block: 0.25rem;
-    color: color.$white;
-
-    strong {
-      font-weight: 700;
+  .footer {
+    
+    margin-block-start: $spacing-xl;
+    
+    .footer-info {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
     }
   }
 }

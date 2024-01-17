@@ -5,6 +5,8 @@ import "./../reset.css";
 import "./../style.scss";
 
 const Layout = ({ pageTitle, children }) => {
+  const year = new Date().getFullYear();
+
   return (
     <div className="site-wrapper">
       <header className="header">
@@ -46,12 +48,13 @@ const Layout = ({ pageTitle, children }) => {
       </main>
       <footer className="footer">
         <div className="footer-content">
-          <div>
-            <p>
-              <strong>© 2023 Merit Network, Inc</strong>
-            </p>
-          </div>
-          <hr />
+          <p>
+            Merit’s Mission is connecting organizations and building community.
+            We provide networking, security and community services to member
+            organizations that help make our society a better place to learn,
+            discover, work and live – while upholding the principles of an open
+            internet.
+          </p>
           <div className="footer-info">
             <div>
               <p>
@@ -69,6 +72,41 @@ const Layout = ({ pageTitle, children }) => {
                 Email: <a href="mailto:radb@merit.edu">radb@merit.edu</a>
               </p>
             </div>
+            <div>
+              <p>
+                <strong>Site Menu</strong>
+              </p>
+              <ul>
+                <li>
+                  <Link to="/">Home</Link>
+                </li>
+                <li>
+                  <Link to="/overview">Overview</Link>
+                </li>
+                <li>
+                  <Link to="/registry">Registry List</Link>
+                </li>
+                <li>
+                  <Link to="/rpsl-guide">RPSL Reference Guide</Link>
+                </li>
+                <li>
+                  <Link to="/faqs">FAQs</Link>
+                </li>
+                <li>
+                  <a
+                    href="http://www.radb.net/support/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Support
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <hr />
+          <div>
+            <p>© {year} Merit Network, Inc</p>
           </div>
         </div>
       </footer>
