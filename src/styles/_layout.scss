@@ -2,12 +2,13 @@
 
 // Global Layout
 $spacing: 1rem;
+$spacing-l: 2rem;
 $spacing-xl: 3rem;
 
 .site-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: start;
+  // display: flex;
+  // flex-direction: column;
+  // align-items: start;
   // min-height: 100vh;
 }
 
@@ -15,6 +16,7 @@ $spacing-xl: 3rem;
 // header
 .header {
   position: fixed;
+  top: 0px;
   width: 100%;
   background-color: color.$transparent-white;
   border-top: 3px solid color.$teal-accent;
@@ -23,29 +25,44 @@ $spacing-xl: 3rem;
 
   // Logo style
   .logo-text {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 
   .main-nav {
-    margin-block-start: $spacing-xl;
+    margin-block-start: $spacing;
     text-align: left;
+    padding: $spacing;
+    transform: scale(1, 0);
+    transform-origin: top;
+    transition: transform 400ms ease-in-out;
+
+    a {
+      opacity: 0;
+    }
   }
 
   .nav-toggle {
-    display: none;
+    position: absolute !important;
+    top: -9999px !important;
+    left: -9999px !important;
   }
 
-  // .nav-toggle:checked ~ nav {
-  //   display: block;
-  // }
+  .nav-toggle:checked ~ nav {
+    // display: block;
+    transform: scale(1, 1);
+  }
+
+  .nav-toggle:checked ~ nav a {
+    opacity: 1;
+    transition: opacity 250ms ease-in-out 250ms;
+  }
 
   .nav-toggle-label {
     position: absolute;
-    top: 0;
+    top: 1.5rem;
     left: 0;
-    margin-inline-start: $spacing;
+    margin-left: $spacing;
     cursor: pointer;
-    height: 100%;
     color: color.$mblack;
     display: flex;
     align-items: center;

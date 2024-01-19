@@ -24,9 +24,10 @@ const Header = () => {
       <header className="header">
         <p className="logo-text">IRR | Merit</p>
         <input type="checkbox" id="nav-toggle" className="nav-toggle" />
+        <hr />
         {isExpanded && <NavMenu />}
         <label htmlFor="nav-toggle" className="nav-toggle-label" onClick={() => toggleExpansion(!isExpanded)}>
-          {!isExpanded && <i class="fa-solid fa-xmark"></i>}
+          <span></span>
         </label>
       </header>
     </>
