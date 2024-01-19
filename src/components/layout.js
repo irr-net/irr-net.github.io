@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "gatsby";
 
 import "./../reset.css";
@@ -18,15 +18,13 @@ const Layout = ({ pageTitle, children }) => {
 };
 
 const Header = () => {
-  const [isExpanded, toggleExpansion] = useState(false)
   return (
     <>
       <header className="header">
         <p className="logo-text">IRR | Merit</p>
         <input type="checkbox" id="nav-toggle" className="nav-toggle" />
-        <hr />
-        {isExpanded && <NavMenu />}
-        <label htmlFor="nav-toggle" className="nav-toggle-label" onClick={() => toggleExpansion(!isExpanded)}>
+        <NavMenu />
+        <label htmlFor="nav-toggle" className="nav-toggle-label" >
           <span></span>
         </label>
       </header>
@@ -36,7 +34,7 @@ const Header = () => {
 
 export const NavMenu = () => {
   return (
-    <nav className="main-nav">
+    <nav className="nav-container">
       <ul className="nav-menu">
         <li>
           <Link to="/">Home</Link>

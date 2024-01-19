@@ -21,14 +21,15 @@ $spacing-xl: 3rem;
   background-color: color.$transparent-white;
   border-top: 3px solid color.$teal-accent;
   z-index: 1000;
-  text-align: center;
 
   // Logo style
   .logo-text {
     font-size: 1.5rem;
+    margin-left: $spacing;
   }
 
-  .main-nav {
+  nav {
+    display: none;
     text-align: left;
     padding: 0px $spacing;
     transform: scale(1, 0);
@@ -47,7 +48,7 @@ $spacing-xl: 3rem;
   }
 
   .nav-toggle:checked ~ nav {
-    // display: block;
+    display: block;
     transform: scale(1, 1);
   }
 
@@ -59,8 +60,8 @@ $spacing-xl: 3rem;
   .nav-toggle-label {
     position: absolute;
     top: 1.5rem;
-    left: 0;
-    margin-left: $spacing;
+    right: 0;
+    margin-right: $spacing;
     cursor: pointer;
     color: color.$mblack;
     display: flex;

@@ -48,8 +48,8 @@ const HeroSection = () => {
       <h1 className="hero-text">Internet Routing Registry</h1>
       <p>A globally distributed routing information database</p>
       <div className="button-group">
-        <button >View Routing Registries</button>
-        <button className="outline">Learn more</button>
+        <button ><Link to="/registry">View Routing Registries</Link></button>
+        <button className="outline"><Link to="/overview">Learn more</Link></button>
       </div>
     </div>
   )

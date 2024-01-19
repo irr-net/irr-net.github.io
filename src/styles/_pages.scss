@@ -16,7 +16,7 @@
   padding-inline: 1rem;
 
   h1 {
-    font-size: 4rem;
+    font-size: 3rem;
     margin-block: 0.5rem;
   }
 
@@ -38,10 +38,17 @@
       border-radius: 0.5rem;
       color: color.$mblack;
 
+      a {
+        text-decoration: none;
+      }
+
       &.outline {
         background-color: transparent;
         border: 2px solid color.$white;
-        color: color.$white;
+
+        a {
+          color: color.$white;
+        }
       }
     }
   }
