@@ -4,49 +4,87 @@
 $spacing: 1rem;
 $spacing-xl: 3rem;
 
-$content-breakin-width: 900px;
+.site-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  // min-height: 100vh;
+}
 
 // Template names
-// 1. header
+// header
 .header {
-  grid-area: header;
-  // position: fixed;
+  position: fixed;
   width: 100%;
-  background-color: color.$white;
+  background-color: color.$transparent-white;
   border-top: 3px solid color.$teal-accent;
   z-index: 1000;
+  text-align: center;
 
-  .header-container {
-    display: flex;
-    height: 3em;
-    width: min(90%, 1400px);
-    // padding-inline: 2em;
-    padding-block: $spacing;
-    margin-inline: auto;
-
-    // Logo style
-    .logo-text {
-      font-size: 3rem;
-    }
+  // Logo style
+  .logo-text {
+    font-size: 2rem;
   }
+
+  .main-nav {
+    margin-block-start: $spacing-xl;
+    text-align: left;
+  }
+
+  .nav-toggle {
+    display: none;
+  }
+
+  // .nav-toggle:checked ~ nav {
+  //   display: block;
+  // }
+
+  .nav-toggle-label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-inline-start: $spacing;
+    cursor: pointer;
+    height: 100%;
+    color: color.$mblack;
+    display: flex;
+    align-items: center;
+
+    span,
+    span::before,
+    span::after {
+      display: block;
+      width: 2rem;
+      height: 2px;
+      border-radius: 2px;
+      background-color: color.$mblack;
+      position: relative;
+    }
+
+    span::before,
+    span::after {
+      content: "";
+      position: absolute;
+    }
+
+    span::before {
+      bottom: 0.5rem;
+    }
+
+    span::after {
+      top: 0.5rem;
+    }
+  } // end nav-toggle-label1
 }
 
-// 2. navigation
-.main-nav {
-  grid-area: nav;
-  padding-inline: $spacing;
-  margin-block-start: $spacing-xl;
-}
-
-// 3. main content
+// main content
 .content {
-  grid-area: content;
+  margin-top: 5rem;
   padding-inline: $spacing;
 }
 
-// 4. footer
+// footer
 .footer {
-  grid-area: footer;
   display: flex;
   flex-direction: column;
   padding-inline: $spacing;
@@ -68,21 +106,8 @@ $content-breakin-width: 900px;
   }
 }
 
-.site-wrapper {
-  display: grid;
-  grid-template-areas:
-    "header"
-    "nav"
-    "content"
-    "footer";
-
-  margin: 0;
-  font-size: 1.125rem;
-  min-height: 100vh;
-}
-
 // Media queries
-@media (min-width: 600px) {
+@media screen and (min-width: 600px) {
   .site-wrapper {
     grid-template-columns: 1fr 4fr;
     grid-template-areas:
@@ -94,9 +119,8 @@ $content-breakin-width: 900px;
   }
 
   .footer {
-    
     margin-block-start: $spacing-xl;
-    
+
     .footer-info {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
