@@ -7,6 +7,7 @@ module.exports = {
     siteUrl: `https://www.irr.net`,
   },
   plugins: [
+    "gatsby-source-fontawesome",
     "gatsby-plugin-image",
     "gatsby-plugin-sitemap",
     {
