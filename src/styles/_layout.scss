@@ -29,9 +29,8 @@ $spacing-xl: 3rem;
   }
 
   .main-nav {
-    margin-block-start: $spacing;
     text-align: left;
-    padding: $spacing;
+    padding: 0px $spacing;
     transform: scale(1, 0);
     transform-origin: top;
     transition: transform 400ms ease-in-out;
@@ -96,8 +95,6 @@ $spacing-xl: 3rem;
 
 // main content
 .content {
-  margin-top: 5rem;
-  padding-inline: $spacing;
 }
 
 // footer

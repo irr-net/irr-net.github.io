@@ -17,6 +17,7 @@
   "dependencies": {
     "@mdx-js/react": "^3.0.0",
     "gatsby": "^5.13.1",
+    "gatsby-plugin-fontawesome-css": "^1.2.0",
     "gatsby-plugin-image": "^3.13.0",
     "gatsby-plugin-mdx": "^5.13.0",
     "gatsby-plugin-sass": "^6.13.0",

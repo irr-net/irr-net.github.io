@@ -1,0 +1,48 @@
+@use "color";
+
+// Landing Page
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url(./assets/images/home-bg-graphic@330x.png);
+  background-size: cover;
+  height: 90vh;
+
+  color: color.$white;
+  text-align: center;
+  line-height: normal;
+  padding-inline: 1rem;
+
+  h1 {
+    font-size: 4rem;
+    margin-block: 0.5rem;
+  }
+
+  p {
+    font-size: 1.25rem;
+    margin-block: 1.5rem;
+  }
+
+  .button-group {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1.5rem;
+
+    button {
+      width: 100%;
+      font-size: 1.25rem;
+      padding: 1rem 2rem;
+      border: none;
+      border-radius: 0.5rem;
+      color: color.$mblack;
+
+      &.outline {
+        background-color: transparent;
+        border: 2px solid color.$white;
+        color: color.$white;
+      }
+    }
+  }
+}

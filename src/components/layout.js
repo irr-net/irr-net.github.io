@@ -9,7 +9,7 @@ const Layout = ({ pageTitle, children }) => {
     <div className="site-wrapper">
       <Header />
       <main className="content">
-        <h1>{pageTitle}</h1>
+        {pageTitle && <h1>{pageTitle}</h1>}
         {children}
       </main>
       <Footer />
