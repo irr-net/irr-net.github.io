@@ -22,12 +22,14 @@ const Header = () => {
   return (
     <>
       <header className="header">
-        <p className="logo-text">IRR | Merit</p>
-        <input type="checkbox" id="nav-toggle" className="nav-toggle" />
-        <NavMenu />
-        <label htmlFor="nav-toggle" className="nav-toggle-label" >
-          <span></span>
-        </label>
+        <div className="center-page-width-content">
+          <p className="logo-text">IRR | Merit</p>
+          <input type="checkbox" id="nav-toggle" className="nav-toggle" />
+          <NavMenu />
+          <label htmlFor="nav-toggle" className="nav-toggle-label" >
+            <span></span>
+          </label>
+        </div>
       </header>
     </>
   )
@@ -71,7 +73,7 @@ const Footer = () => {
 
   return (
     <footer className="footer">
-      <div className="footer-content">
+      <div className="footer-content center-page-width-content">
         <img className="footer-logo" src={Logo} alt="Merit Logo" />
         <p>
           Merit’s Mission is connecting organizations and building community.

@@ -112,6 +112,7 @@ $spacing-xl: 3rem;
 
   .footer-logo {
     width: 30vw;
+    margin-bottom: $spacing;
   }
 
   p,
@@ -128,17 +129,19 @@ $spacing-xl: 3rem;
 // Media queries
 @media screen and (min-width: 600px) {
   .site-wrapper {
-    grid-template-columns: 1fr 4fr;
-    grid-template-areas:
-      "header header"
-      "nav content"
-      "footer footer";
-    width: min(100%, 1200px);
-    margin: auto;
+    .center-page-width-content {
+      width: min(100%, 1200px);
+      margin: auto;
+    }
   }
 
   .footer {
     margin-block-start: $spacing-xl;
+
+    .footer-logo {
+      width: 10vw;
+      margin-bottom: $spacing;
+    }
 
     .footer-info {
       display: grid;

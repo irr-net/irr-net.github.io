@@ -12,7 +12,7 @@ const IndexPage = () => {
       <HeroSection />
       <div className="inline-margin">
         <h2>About the Internet Routing Registry</h2>
-        <div className="about-section">
+        <div className="about-section center-page-width-content">
           <div>
             <p>
               This site is designed to promote coordination of the Internet Routing
@@ -57,11 +57,13 @@ const IndexPage = () => {
 const HeroSection = () => {
   return (
     <div className="hero-section">
-      <h1 className="hero-text">Internet Routing Registry</h1>
-      <p>A globally distributed routing information database</p>
-      <div className="button-group">
-        <button ><Link to="/registry">View Routing Registries</Link></button>
-        <button className="outline"><Link to="/overview">Learn more</Link></button>
+      <div className="hero-content center-page-width-content">
+        <h1 className="hero-text">Internet Routing Registry</h1>
+        <p>A globally distributed routing information database</p>
+        <div className="button-group">
+          <button ><Link to="/registry">View Routing Registries</Link></button>
+          <button className="outline"><Link to="/overview">Learn more</Link></button>
+        </div>
       </div>
     </div>
   )
