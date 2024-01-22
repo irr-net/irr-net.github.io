@@ -3,6 +3,7 @@ import { Link } from "gatsby";
 
 import "./../reset.css";
 import "./../style.scss";
+import Logo from "./../assets/images/merit_logo.png";
 
 const Layout = ({ pageTitle, children }) => {
   return (
@@ -71,6 +72,7 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-content">
+        <img className="footer-logo" src={Logo} alt="Merit Logo" />
         <p>
           Merit’s Mission is connecting organizations and building community.
           We provide networking, security and community services to member

@@ -96,6 +96,10 @@ $spacing-xl: 3rem;
 
 // main content
 .content {
+  .inline-margin {
+    margin-inline: $spacing;
+    padding-top: $spacing-xl;
+  }
 }
 
 // footer
@@ -103,11 +107,11 @@ $spacing-xl: 3rem;
   display: flex;
   flex-direction: column;
   padding-inline: $spacing;
-  padding-block-start: $spacing-xl;
+  padding-block: $spacing-l;
   background-color: color.$light-grey;
 
-  div {
-    margin-block: 1rem;
+  .footer-logo {
+    width: 30vw;
   }
 
   p,
