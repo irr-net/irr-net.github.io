@@ -5,13 +5,20 @@ import "./../reset.css";
 import "./../style.scss";
 import Logo from "./../assets/images/merit_logo.png";
 
-const Layout = ({ pageTitle, children }) => {
+const Layout = ({ pageTitle, children, isHome }) => {
   return (
     <div className="site-wrapper">
       <Header />
       <main className="content">
-        {pageTitle && <h1>{pageTitle}</h1>}
-        {children}
+        {pageTitle && (
+          <div className="center-page-width-content">
+            <h1>{pageTitle}</h1>
+          </div>
+        )}
+        {isHome 
+          ? <>{children}</>
+          : (<div className="center-page-width-content">{children}</div>)
+        }
       </main>
       <Footer />
     </div>
@@ -22,18 +29,18 @@ const Header = () => {
   return (
     <>
       <header className="header">
-        <div className="center-page-width-content">
+        <div className="header-content center-page-width-content">
           <p className="logo-text">IRR | Merit</p>
-          <input type="checkbox" id="nav-toggle" className="nav-toggle" />
-          <NavMenu />
-          <label htmlFor="nav-toggle" className="nav-toggle-label" >
+          <label htmlFor="nav-toggle" className="nav-toggle-label">
             <span></span>
           </label>
+          <input type="checkbox" id="nav-toggle" className="nav-toggle" />
+          <NavMenu />
         </div>
       </header>
     </>
-  )
-}
+  );
+};
 
 export const NavMenu = () => {
   return (
@@ -65,8 +72,8 @@ export const NavMenu = () => {
         </li>
       </ul>
     </nav>
-  )
-}
+  );
+};
 
 const Footer = () => {
   const year = new Date().getFullYear();
@@ -76,8 +83,8 @@ const Footer = () => {
       <div className="footer-content center-page-width-content">
         <img className="footer-logo" src={Logo} alt="Merit Logo" />
         <p>
-          Merit’s Mission is connecting organizations and building community.
-          We provide networking, security and community services to member
+          Merit’s Mission is connecting organizations and building community. We
+          provide networking, security and community services to member
           organizations that help make our society a better place to learn,
           discover, work and live – while upholding the principles of an open
           internet.
@@ -138,6 +145,6 @@ const Footer = () => {
       </div>
     </footer>
   );
-}
+};
 
 export default Layout;

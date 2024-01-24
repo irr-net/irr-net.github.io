@@ -8,7 +8,7 @@ import DBGraphic from "./../assets/images/db-graphic.png";
 
 const IndexPage = () => {
   return (
-    <Layout>
+    <Layout isHome>
       <HeroSection />
       <div className="inline-margin">
         <h2>About the Internet Routing Registry</h2>

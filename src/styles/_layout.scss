@@ -22,76 +22,78 @@ $spacing-xl: 3rem;
   border-top: 3px solid color.$teal-accent;
   z-index: 1000;
 
-  // Logo style
-  .logo-text {
-    font-size: 1.5rem;
-    margin-left: $spacing;
-  }
-
-  nav {
-    display: none;
-    text-align: left;
-    padding: 0px $spacing;
-    transform: scale(1, 0);
-    transform-origin: top;
-    transition: transform 400ms ease-in-out;
-
-    a {
-      opacity: 0;
+  .header-content {
+    // Logo style
+    .logo-text {
+      font-size: 1.5rem;
+      margin-left: $spacing;
     }
-  }
 
-  .nav-toggle {
-    position: absolute !important;
-    top: -9999px !important;
-    left: -9999px !important;
-  }
+    nav {
+      display: none;
+      text-align: left;
+      padding: 0px $spacing;
+      transform: scale(1, 0);
+      transform-origin: top;
+      transition: transform 400ms ease-in-out;
 
-  .nav-toggle:checked ~ nav {
-    display: block;
-    transform: scale(1, 1);
-  }
+      a {
+        opacity: 0;
+      }
+    }
 
-  .nav-toggle:checked ~ nav a {
-    opacity: 1;
-    transition: opacity 250ms ease-in-out 250ms;
-  }
+    .nav-toggle {
+      position: absolute !important;
+      top: -9999px !important;
+      left: -9999px !important;
+    }
 
-  .nav-toggle-label {
-    position: absolute;
-    top: 1.5rem;
-    right: 0;
-    margin-right: $spacing;
-    cursor: pointer;
-    color: color.$mblack;
-    display: flex;
-    align-items: center;
-
-    span,
-    span::before,
-    span::after {
+    .nav-toggle:checked ~ nav {
       display: block;
-      width: 2rem;
-      height: 2px;
-      border-radius: 2px;
-      background-color: color.$mblack;
-      position: relative;
+      transform: scale(1, 1);
     }
 
-    span::before,
-    span::after {
-      content: "";
+    .nav-toggle:checked ~ nav a {
+      opacity: 1;
+      transition: opacity 250ms ease-in-out 250ms;
+    }
+
+    .nav-toggle-label {
       position: absolute;
-    }
+      top: 1.5rem;
+      right: 0;
+      margin-right: $spacing;
+      cursor: pointer;
+      color: color.$mblack;
+      display: flex;
+      align-items: center;
 
-    span::before {
-      bottom: 0.5rem;
-    }
+      span,
+      span::before,
+      span::after {
+        display: block;
+        width: 2rem;
+        height: 2px;
+        border-radius: 2px;
+        background-color: color.$mblack;
+        position: relative;
+      }
 
-    span::after {
-      top: 0.5rem;
-    }
-  } // end nav-toggle-label1
+      span::before,
+      span::after {
+        content: "";
+        position: absolute;
+      }
+
+      span::before {
+        bottom: 0.5rem;
+      }
+
+      span::after {
+        top: 0.5rem;
+      }
+    } // end nav-toggle-label1
+  }
 }
 
 // main content
@@ -132,6 +134,48 @@ $spacing-xl: 3rem;
     .center-page-width-content {
       width: min(100%, 1200px);
       margin: auto;
+    }
+  }
+
+  .header {
+    .header-content {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      nav {
+        display: block;
+        padding: 0px;
+        transform: scale(1, 1);
+        transition: none;
+
+        .nav-menu {
+          display: flex;
+          flex-direction: row;
+          gap: $spacing-l;
+          justify-content: space-between;
+          align-items: center;
+
+          a {
+            color: color.$mblack;
+            font-weight: 700;
+            opacity: 1;
+
+            &:hover {
+              color: color.$mteal;
+              text-decoration: none;
+            }
+          }
+        }
+      }
+
+      .nav-toggle {
+        display: none;
+      }
+
+      .nav-toggle-label {
+        display: none;
+      }
     }
   }
 

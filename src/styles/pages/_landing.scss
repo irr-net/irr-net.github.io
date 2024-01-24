@@ -1,5 +1,5 @@
-@use "color";
-@use "layout";
+@use "./../color" as color;
+@use "./../layout" as layout;
 
 // Landing Page
 .hero-section {
