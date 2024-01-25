@@ -11,9 +11,10 @@ const RegistryListPage = () => {
         contact information.
       </p>
       <hr />
-      <div className="registry-list">
+      <div class="registry-list-container">
+        <div className="registry-list"></div>
+        <TableOfContent />
       </div>
-      <TableOfContent />
     </Layout>
   );
 };
@@ -77,7 +78,7 @@ const TableOfContent = () => (
       </li>
     </ul>
   </div>
-)
+);
 
 export const Head = () => <title>IRR | Registry List</title>;
 
