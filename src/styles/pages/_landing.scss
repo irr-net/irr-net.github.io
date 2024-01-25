@@ -1,0 +1,148 @@
+@use "./../color" as color;
+@use "./../layout" as layout;
+
+// Landing Page
+.hero-section {
+  background-image: url(./assets/images/home-bg-graphic@330x.png);
+  background-size: cover;
+
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+
+    color: color.$white;
+    text-align: center;
+    line-height: normal;
+    padding-inline: 1rem;
+
+    h1 {
+      font-size: 3rem;
+      margin-block: 0.5rem;
+    }
+
+    p {
+      font-size: 1.25rem;
+      margin-block: 1.5rem;
+    }
+
+    .button-group {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-gap: 1.5rem;
+
+      button {
+        width: 100%;
+        font-size: 1.25rem;
+        padding: 1rem 2rem;
+        border: none;
+        border-radius: 0.5rem;
+        color: color.$mblack;
+
+        a {
+          text-decoration: none;
+        }
+
+        &.outline {
+          background-color: transparent;
+          border: 2px solid color.$white;
+
+          a {
+            color: color.$white;
+          }
+        }
+
+        &:hover {
+          cursor: pointer;
+          opacity: 0.9;
+        }
+      }
+    }
+  }
+}
+
+// About Section
+.about-section {
+  display: flex;
+  flex-direction: column;
+  gap: layout.$spacing;
+
+  img {
+    width: 100%;
+    margin-block: layout.$spacing;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  // Hero Section
+  .hero-section {
+    .hero-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      // align-items: start;
+
+      h1 {
+        font-size: 4rem;
+        margin-block: 0.5rem;
+      }
+
+      p {
+        font-size: 1.5rem;
+        margin-block: 1.5rem;
+      }
+
+      .button-group {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 1.5rem;
+        margin-block: 1.5rem;
+      }
+    }
+  }
+
+  // About Section
+  h2 {
+    text-align: center;
+  }
+  .about-section {
+    display: grid;
+    grid-template-areas:
+      "about-text-1 about-img-1"
+      "about-img-2 about-text-2";
+    gap: layout.$spacing;
+    align-items: center;
+
+    div {
+      padding: layout.$spacing-l;
+
+      p {
+        font-size: 1.25rem;
+        line-height: 1.75rem;
+      }
+    }
+
+    div:nth-child(1) {
+      grid-area: about-text-1;
+    }
+
+    div:nth-child(2) {
+      grid-area: about-img-1;
+    }
+
+    div:nth-child(3) {
+      grid-area: about-text-2;
+    }
+
+    div:nth-child(4) {
+      grid-area: about-img-2;
+    }
+
+    img {
+      width: 100%;
+      margin-block: layout.$spacing;
+    }
+  }
+}

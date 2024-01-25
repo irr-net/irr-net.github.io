@@ -1,114 +1,195 @@
 @use "color";
 
-.main-layout {
-  margin: 0;
-  font-size: 1.125rem;
+// Global Layout
+$spacing: 1rem;
+$spacing-l: 2rem;
+$spacing-xl: 3rem;
 
-  min-height: 100vh;
-  // max-width: 100vw;
-  display: flex;
-  flex-direction: column;
+.site-wrapper {
+  // display: flex;
+  // flex-direction: column;
+  // align-items: start;
+  // min-height: 100vh;
 }
 
-// Header
+// Template names
+// header
 .header {
   position: fixed;
+  top: 0px;
   width: 100%;
-  background-color: color.$white;
+  background-color: color.$transparent-white;
   border-top: 3px solid color.$teal-accent;
   z-index: 1000;
 
-  .header-container {
-    display: flex;
-    height: 3em;
-    width: min(90%, 1400px);
-    padding-inline: 2em;
-    padding-block: 1em;
-    margin-inline: auto;
-
+  .header-content {
     // Logo style
     .logo-text {
-      font-size: 3rem;
+      font-size: 1.5rem;
+      margin-left: $spacing;
     }
+
+    nav {
+      display: none;
+      text-align: left;
+      padding: 0px $spacing;
+      transform: scale(1, 0);
+      transform-origin: top;
+      transition: transform 400ms ease-in-out;
+
+      a {
+        opacity: 0;
+      }
+    }
+
+    .nav-toggle {
+      position: absolute !important;
+      top: -9999px !important;
+      left: -9999px !important;
+    }
+
+    .nav-toggle:checked ~ nav {
+      display: block;
+      transform: scale(1, 1);
+    }
+
+    .nav-toggle:checked ~ nav a {
+      opacity: 1;
+      transition: opacity 250ms ease-in-out 250ms;
+    }
+
+    .nav-toggle-label {
+      position: absolute;
+      top: 1.5rem;
+      right: 0;
+      margin-right: $spacing;
+      cursor: pointer;
+      color: color.$mblack;
+      display: flex;
+      align-items: center;
+
+      span,
+      span::before,
+      span::after {
+        display: block;
+        width: 2rem;
+        height: 2px;
+        border-radius: 2px;
+        background-color: color.$mblack;
+        position: relative;
+      }
+
+      span::before,
+      span::after {
+        content: "";
+        position: absolute;
+      }
+
+      span::before {
+        bottom: 0.5rem;
+      }
+
+      span::after {
+        top: 0.5rem;
+      }
+    } // end nav-toggle-label1
   }
 }
 
-// Content
-.site-content {
-  display: flex;
-  align-items: start;
-  padding-inline: 2em;
-  padding-block: 1em;
-  width: min(90%, 1400px);
-  margin-inline: auto;
-}
-
-.aside {
-  width: max(200px, 25%);
-  position: sticky;
-  top: 6em;
-  padding-top: 3rem;
-
-  .nav-container {
-    display: flex;
-    flex-direction: column;
-  }
-  .nav-menu {
+// main content
+.content {
+  .inline-margin {
+    margin-inline: $spacing;
+    padding-top: $spacing-xl;
   }
 }
 
-// Main Content
-.main-container {
-  padding-top: 7rem;
-  width: max(1200px, 85%);
-}
-
-// Footer
-// page table of contents
-.toc {
-  width: min(25%, 18rem);
-  position: sticky;
-  margin-left: auto;
-
-  .content-list {
-    display: grid;
-  }
-}
-
-// Footer
-footer {
-  margin-top: auto;
-  background-color: #304c58;
-}
-
-.footer-content {
+// footer
+.footer {
   display: flex;
   flex-direction: column;
-  width: min(90%, 1400px);
-  padding-inline: 1rem;
-  padding-top: 1rem;
-  padding-bottom: 2rem;
-  margin: auto;
+  padding-inline: $spacing;
+  padding-block: $spacing-l;
+  background-color: color.$light-grey;
 
-  .footer-info {
-    display: flex;
-
-    div {
-      width: 50%;
-    }
+  .footer-logo {
+    width: 30vw;
+    margin-bottom: $spacing;
   }
 
-  a {
-    color: color.$teal-accent;
-  }
-
-  p {
+  p,
+  li {
     font-size: 0.85rem;
     margin-block: 0.25rem;
-    color: color.$white;
 
     strong {
       font-weight: 700;
+    }
+  }
+}
+
+// Media queries
+@media screen and (min-width: 600px) {
+  .site-wrapper {
+    .center-page-width-content {
+      width: min(100%, 1200px);
+      margin: auto;
+    }
+  }
+
+  .header {
+    .header-content {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      nav {
+        display: block;
+        padding: 0px;
+        transform: scale(1, 1);
+        transition: none;
+
+        .nav-menu {
+          display: flex;
+          flex-direction: row;
+          gap: $spacing-l;
+          justify-content: space-between;
+          align-items: center;
+
+          a {
+            color: color.$mblack;
+            font-weight: 700;
+            opacity: 1;
+
+            &:hover {
+              color: color.$mteal;
+              text-decoration: none;
+            }
+          }
+        }
+      }
+
+      .nav-toggle {
+        display: none;
+      }
+
+      .nav-toggle-label {
+        display: none;
+      }
+    }
+  }
+
+  .footer {
+    margin-block-start: $spacing-xl;
+
+    .footer-logo {
+      width: 10vw;
+      margin-bottom: $spacing;
+    }
+
+    .footer-info {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
     }
   }
 }
