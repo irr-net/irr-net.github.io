@@ -11,7 +11,7 @@ const IndexPage = () => {
     <Layout isHome>
       <HeroSection />
       <div className="inline-margin">
-        <h2>About the Internet Routing Registry</h2>
+        <h2 className="about-heading">About the Internet Routing Registry</h2>
         <div className="about-section center-page-width-content">
           <div>
             <p>

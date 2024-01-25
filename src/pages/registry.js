@@ -21,6 +21,7 @@ const RegistryListPage = () => {
 
 const TableOfContent = () => (
   <div className="toc">
+    <h2>Table of Contents</h2>
     <ul>
       <li>
         <Link to="#AFRINIC">AFRINIC</Link>
