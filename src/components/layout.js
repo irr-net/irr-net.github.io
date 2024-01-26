@@ -9,16 +9,14 @@ const Layout = ({ pageTitle, children, isHome }) => {
   return (
     <div className="site-wrapper">
       <Header />
-      <main className="content">
-        {pageTitle && (
-          <div className="center-page-width-content">
-            <h1>{pageTitle}</h1>
+      <main className={`content-container ${!isHome && "center-page-width-content"}`}>
+        <div className={`${!isHome && "content"}`}>
+          <div className="nav-parent">{!isHome && <NavMenu />}</div>
+          <div>
+            {pageTitle && <h1>{pageTitle}</h1>}
+            {children}
           </div>
-        )}
-        {isHome 
-          ? <>{children}</>
-          : (<div className="center-page-width-content">{children}</div>)
-        }
+        </div>
       </main>
       <Footer />
     </div>

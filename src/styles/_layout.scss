@@ -4,29 +4,30 @@
 $spacing: 1rem;
 $spacing-l: 2rem;
 $spacing-xl: 3rem;
+$spacing-xxl: 5rem;
 
 .site-wrapper {
-  // display: flex;
-  // flex-direction: column;
-  // align-items: start;
-  // min-height: 100vh;
+  margin: 0px;
 }
 
-// Template names
 // header
 .header {
   position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   top: 0px;
   width: 100%;
+  height: $spacing-xxl;
   background-color: color.$transparent-white;
   border-top: 3px solid color.$teal-accent;
+  box-shadow: 1px 3px 3px color.$dark-grey;
   z-index: 1000;
 
   .header-content {
     // Logo style
     .logo-text {
       font-size: 1.5rem;
-      margin-left: $spacing;
     }
 
     nav {
@@ -97,7 +98,9 @@ $spacing-xl: 3rem;
 }
 
 // main content
-.content {
+.content-container {
+  padding-top: $spacing-xxl;
+
   .inline-margin {
     margin-inline: $spacing;
     padding-top: $spacing-xl;
@@ -177,6 +180,65 @@ $spacing-xl: 3rem;
         display: none;
       }
     }
+  }
+
+  .content-container {
+    // padding-top: $spacing-xxl;
+    margin-top: $spacing-xxl;
+
+    .inline-margin {
+      margin-inline: $spacing-xl;
+      padding-top: $spacing-xl;
+    }
+
+    .content {
+      display: grid;
+      grid-template-columns: 225px 1fr;
+      grid-gap: 1.5rem;
+
+      .nav-parent {
+        position: relative;
+      }
+
+      .nav-container {
+        position: sticky;
+        top: 0px;
+        padding-top: $spacing-xxl;
+      }
+    }
+
+    .toc-parent {
+      position: relative;
+    }
+
+    .toc {
+      top: calc(2rem + $spacing-xxl);
+      position: sticky;
+      padding-top: 0px;
+
+      h2 {
+        text-align: left;
+        text-transform: uppercase;
+        font-size: 1.25rem;
+      }
+
+      ul {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 0.5rem;
+
+        li {
+          margin-block: 0px;
+          font-size: 0.875rem;
+        }
+      }
+    }
+  }
+
+  .content-with-aside {
+    display: grid;
+    grid-template-columns: 1fr 200px;
+    grid-gap: 1.5rem;
   }
 
   .footer {

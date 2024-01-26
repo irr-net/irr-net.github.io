@@ -1,7 +1,6 @@
 @use "color";
 @use "font";
 
-
 h1 {
   font-family: font.$f-mr-eaves;
   font-weight: 900;
@@ -35,7 +34,8 @@ h4 {
 }
 
 p,
-li {
+li,
+strong {
   font-family: font.$f-open-sans;
   font-weight: 400;
   font-style: normal;
@@ -43,10 +43,10 @@ li {
   margin-top: 0.75rem;
   margin-bottom: 1rem;
   line-height: 1.5rem;
+}
 
-  strong {
-    font-weight: 700;
-  }
+strong {
+  font-weight: 700;
 }
 
 pre {
@@ -54,7 +54,6 @@ pre {
   background: color.$light-grey;
   padding: 1rem;
 }
-
 
 a {
   text-decoration: none;

@@ -1,6 +1,14 @@
-
-.registry-list-container {
+.registry-info {
+  .registry-info-item {
     display: grid;
-    grid-template-columns: 3fr 1fr;
-    grid-gap: 1.5rem;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.25rem;
+
+    p,
+    strong {
+      display: flex;
+      margin-block: 0px;
+      max-width: fit-content;
+    }
+  }
 }
