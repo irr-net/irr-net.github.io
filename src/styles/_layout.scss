@@ -183,7 +183,8 @@ $spacing-xxl: 5rem;
   }
 
   .content-container {
-    padding-top: $spacing-xxl;
+    // padding-top: $spacing-xxl;
+    margin-top: $spacing-xxl;
 
     .inline-margin {
       margin-inline: $spacing-xl;
@@ -195,18 +196,32 @@ $spacing-xxl: 5rem;
       grid-template-columns: 225px 1fr;
       grid-gap: 1.5rem;
 
+      .nav-parent {
+        position: relative;
+      }
+
       .nav-container {
+        position: sticky;
+        top: 0px;
         padding-top: $spacing-xxl;
       }
     }
 
+    .toc-parent {
+      position: relative;
+    }
+
     .toc {
+      top: calc(2rem + $spacing-xxl);
+      position: sticky;
+      padding-top: 0px;
+
       h2 {
         text-align: left;
         text-transform: uppercase;
         font-size: 1.25rem;
       }
-      
+
       ul {
         display: grid;
         grid-template-columns: 1fr;
@@ -218,6 +233,12 @@ $spacing-xxl: 5rem;
         }
       }
     }
+  }
+
+  .content-with-aside {
+    display: grid;
+    grid-template-columns: 1fr 200px;
+    grid-gap: 1.5rem;
   }
 
   .footer {
