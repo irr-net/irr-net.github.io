@@ -12,7 +12,7 @@ const Layout = ({ pageTitle, children, isHome }) => {
       <main className={`content-container ${!isHome && "center-page-width-content"}`}>
         <div className={`${!isHome && "content"}`}>
           <div className="nav-parent">{!isHome && <NavMenu />}</div>
-          <div>
+          <div className="article">
             {pageTitle && <h1>{pageTitle}</h1>}
             {children}
           </div>
