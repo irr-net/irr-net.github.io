@@ -26,16 +26,6 @@ $spacing-xxl: 5rem;
   z-index: 1000;
 
   .header-content {
-
-    .logo-container {
-      // display: flex;
-      // flex-direction: row;
-      // align-items: center;
-      // justify-content: space-between;
-      // width: 100%;
-      // height: 5rem;
-      // padding: 0px $spacing;
-    }
     // Logo style
     .logo-text {
       font-size: 1.5rem;
@@ -154,7 +144,7 @@ $spacing-xxl: 5rem;
 @media screen and (min-width: 600px) {
   .site-wrapper {
     .center-page-width-content {
-      width: min(100%, 1200px);
+      width: min(80%, 1200px);
       margin: auto;
     }
   }
@@ -202,8 +192,6 @@ $spacing-xxl: 5rem;
   }
 
   .content-container {
-    // padding-top: $spacing-xxl;
-    // margin-top: $spacing-xxl;
 
     .inline-margin {
       margin-inline: $spacing-xl;
@@ -216,6 +204,7 @@ $spacing-xxl: 5rem;
       grid-gap: 1.5rem;
 
       .nav-parent {
+        display: block;
         position: relative;
       }
 
