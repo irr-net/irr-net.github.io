@@ -32,9 +32,9 @@ const Header = () => {
     <>
       <header className="header">
         <div className="header-content center-page-width-content">
-          <Link to="/">
-          <p className="logo-text">IRR | Merit</p>
-          </Link>
+          <p className="logo-text">
+            <Link to="/">IRR | Merit</Link>
+          </p>
           <label htmlFor="nav-toggle" className="nav-toggle-label">
             <span></span>
           </label>
