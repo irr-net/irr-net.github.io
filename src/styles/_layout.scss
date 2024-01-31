@@ -15,16 +15,27 @@ $spacing-xxl: 5rem;
   position: fixed;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  // align-items: center;
   top: 0px;
   width: 100%;
-  height: $spacing-xxl;
+  height: $spacing-xl;
+  padding-inline: $spacing;
   background-color: color.$transparent-white;
   border-top: 3px solid color.$teal-accent;
   box-shadow: 1px 3px 3px color.$dark-grey;
   z-index: 1000;
 
   .header-content {
+
+    .logo-container {
+      // display: flex;
+      // flex-direction: row;
+      // align-items: center;
+      // justify-content: space-between;
+      // width: 100%;
+      // height: 5rem;
+      // padding: 0px $spacing;
+    }
     // Logo style
     .logo-text {
       font-size: 1.5rem;
@@ -78,6 +89,7 @@ $spacing-xxl: 5rem;
         border-radius: 2px;
         background-color: color.$mblack;
         position: relative;
+        margin-right: $spacing-l;
       }
 
       span::before,
@@ -104,6 +116,12 @@ $spacing-xxl: 5rem;
   .inline-margin {
     margin-inline: $spacing;
     padding-top: $spacing-xl;
+  }
+
+  .content {
+    .nav-parent {
+      display: none;
+    }
   }
 }
 
