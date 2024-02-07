@@ -9,16 +9,18 @@ const Layout = ({ pageTitle, children, isHome }) => {
   return (
     <div className="site-wrapper">
       <Header />
-      <main className="content">
-        {pageTitle && (
-          <div className="center-page-width-content">
-            <h1>{pageTitle}</h1>
+      <main
+        className={`content-container ${
+          !isHome && "center-page-width-content"
+        }`}
+      >
+        <div className={`${!isHome && "content"}`}>
+          <div className="nav-parent">{!isHome && <NavMenu />}</div>
+          <div className="article">
+            {pageTitle && <h1>{pageTitle}</h1>}
+            {children}
           </div>
-        )}
-        {isHome 
-          ? <>{children}</>
-          : (<div className="center-page-width-content">{children}</div>)
-        }
+        </div>
       </main>
       <Footer />
     </div>
@@ -30,7 +32,9 @@ const Header = () => {
     <>
       <header className="header">
         <div className="header-content center-page-width-content">
-          <p className="logo-text">IRR | Merit</p>
+          <p className="logo-text">
+            <Link to="/">IRR | Merit</Link>
+          </p>
           <label htmlFor="nav-toggle" className="nav-toggle-label">
             <span></span>
           </label>
