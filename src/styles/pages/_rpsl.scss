@@ -1,0 +1,24 @@
+@use "./../color" as color;
+@use "./../layout" as layout;
+
+section {
+  margin-top: layout.$spacing-xl;
+
+  h2 {
+    margin-bottom: layout.$spacing;
+  }
+}
+
+.reading-rating {
+  font-size: 0.95rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  width: fit-content;
+  margin-top: 0px;
+
+  @each $name, $color in color.$status {
+    &.#{$name} {
+      color: $color;
+    }
+  }
+}

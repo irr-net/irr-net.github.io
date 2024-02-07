@@ -1,14 +1,26 @@
 .registry-info {
   .registry-info-item {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 0.25rem;
+    margin-bottom: 1.5rem;
 
     p,
     strong {
       display: flex;
       margin-block: 0px;
       max-width: fit-content;
+    }
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .registry-info {
+    .registry-info-item {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.25rem;
+      margin-bottom: 0.5rem;
     }
   }
 }
