@@ -25,7 +25,7 @@ const IndexPage = () => {
               information, and news to this new site.{" "}
             </p>
             <p>
-              This site is operated by <a href="https://www.merit.edu" target="_blank" rel="noreferrer"> Merit Network, Inc. </a> Merit also operates the <a href="https://www.radb.net" target="_blank" rel="noreferrer"> RADB </a> and provides the <a href="https://www.radb.net/support/mirrored_irrs.html" target="_blank" rel="noreferrer" > largest Routing Registry mirror </a> site on the Internet. We're also the developers of IRRd, a widely used database server using the RPSL specification.
+              This site is operated by <a href="https://www.merit.edu" target="_blank" rel="noreferrer"> Merit Network, Inc. </a> Merit also operates the <a href="https://www.radb.net" target="_blank" rel="noreferrer"> RADB </a> and provides the <a href="https://www.radb.net/support/mirrored_irrs.html" target="_blank" rel="noreferrer" > largest Routing Registry mirror </a> site on the Internet.
             </p></div>
           <div>
             <img src={NetworkGraphic} alt="Network Graphic" />
@@ -37,7 +37,7 @@ const IndexPage = () => {
               just one component of the IRR. However RADB's mission is to mirror all
               component databases so as to provide the most complete view possible of
               the entire IRR. Currently by querying the Merit whois server data from
-              34 different databases can be found.
+              17 different databases can be found.
             </p>
             <p>
               Be sure to read our <Link to="/FAQs"></Link>FAQ if you're wondering
