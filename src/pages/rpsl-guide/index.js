@@ -170,8 +170,8 @@ const RpslGuidePage = () => {
 };
 
 const TableOfContent = () => (
-  <div class="toc-parent">
-    <div class="toc">
+  <div className="toc-parent">
+    <div className="toc">
       <h2>Table of Contents</h2>
       <ul>
         <li>

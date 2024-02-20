@@ -23,13 +23,13 @@ const OverviewPage = () => {
       <h2>Obtaining IRR Data</h2>
       <p>
         Routing data from the entire global registry may be obtained by entering
-        'whois' commands such as:{" "}
+        'whois' commands such as:
       </p>
       <pre>
-        {`        whois -h whois.radb.net <network_IP>`}
+        {`whois -h whois.radb.net <network_IP>`}
       </pre>
       <pre>
-        {`        whois -h whois.radb.net AS<Autonomous_System_Number>`}
+        {`whois -h whois.radb.net AS<Autonomous_System_Number>`}
       </pre>
       <p>
         You can also obtain IRR data through FTP from <a href=" ftp://ftp.radb.net/radb/dbase" rel="noreferrer">ftp://ftp.radb.net/radb/dbase</a> or access it indirectly through the use of free user{" "}
