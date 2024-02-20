@@ -1,26 +1,55 @@
-.registry-info {
-  .registry-info-item {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 0.25rem;
+@use "./../color" as color;
+
+.registry {
+  overflow-x: scroll;
+  scrollbar-width: none; // For Firefox
+  -ms-overflow-style: none; // For Internet Explorer and Edge
+
+  &::-webkit-scrollbar {
+    // For Chrome, Safari and Opera
+    display: none;
+  }
+
+  h2 {
+    margin-top: 3rem;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
     margin-bottom: 1.5rem;
 
-    p,
-    strong {
-      display: flex;
-      margin-block: 0px;
-      max-width: fit-content;
+    th,
+    td {
+      padding: 0.5rem;
+      border: 1px solid #ddd;
+    }
+
+    th:first-child,
+    td:first-child {
+      min-width: 250px;
+      font-weight: 600;
+    }
+
+    tr {
+      &:nth-child(even) {
+        background-color: color.$light-grey;
+      }
+
+      &:hover {
+        background-color: color.$dark-grey;
+      }
     }
   }
 }
 
 @media screen and (min-width: 600px) {
-  .registry-info {
-    .registry-info-item {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 0.25rem;
-      margin-bottom: 0.5rem;
+  .registry {
+    table {
+      th:first-child,
+      td:first-child {
+        width: 250px;
+      }
     }
   }
 }
