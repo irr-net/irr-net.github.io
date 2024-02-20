@@ -17,41 +17,42 @@ const RegistryListPage = () => {
           {RegistryList.map((registry) => (
             <div key={registry.name} className="registry">
               <h2 id={registry.name}>Registry Name (SOURCE): {registry.name}</h2>
-              <div className="registry-info">
-                <div className="registry-info-item">
-                  <strong>IP Address or DNS Name:</strong>
-                  <p>{registry.dns_name}</p>
-                </div>
-                <div className="registry-info-item">
-                  <strong>FTP Site:</strong>
-                  <p>{registry.ftp_site}</p>
-                </div>
+              <table>
+                <tr>
+                  <td>IP Address or DNS Name:</td>
+                  <td>{registry.dns_name}</td>
+                </tr>
+                {registry.ftp_site &&
+                  <tr>
+                    <td>FTP Site:</td>
+                    <td>{registry.ftp_site.join(", ")}</td>
+                  </tr>}
                 {registry.databases_mirrored &&
-                  <div className="registry-info-item">
-                    <strong>Databases Mirrored:</strong>
-                    <p>{registry.databases_mirrored.join(", ")}</p>
-                  </div>}
-                <div className="registry-info-item">
-                  <strong>Mirror Port and Info:</strong>
-                  <p>{registry.mirror_port_and_info}</p>
-                </div>
-                <div className="registry-info-item">
-                  <strong>Whois Location:</strong>
-                  <p>{registry.whois_location}</p>
-                </div>
-                <div className="registry-info-item">
-                  <strong>Type of Primary Data:</strong>
-                  <p>{registry.type_of_primary_data}</p>
-                </div>
-                <div className="registry-info-item">
-                  <strong>Contact Info:</strong>
-                  <p>{registry.contact_info}</p>
-                </div>
-                <div className="registry-info-item">
-                  <strong>NOC Info:</strong>
-                  <p>{registry.noc_info}</p>
-                </div>
-              </div>
+                  <tr>
+                    <td>Databases Mirrored:</td>
+                    <td>{registry.databases_mirrored.join(", ")}</td>
+                  </tr>}
+                <tr>
+                  <td>Mirror Port and Info:</td>
+                  <td>{registry.mirror_port_and_info}</td>
+                </tr>
+                <tr>
+                  <td>Whois Location:</td>
+                  <td>{registry.whois_location}</td>
+                </tr>
+                <tr>
+                  <td>Type of Primary Data:</td>
+                  <td>{registry.type_of_primary_data}</td>
+                </tr>
+                <tr>
+                  <td>Contact Info:</td>
+                  <td>{registry.contact_info}</td>
+                </tr>
+                <tr>
+                  <td>NOC Info:</td>
+                  <td>{registry.noc_info}</td>
+                </tr>
+              </table>
             </div>
           ))}
         </div>

@@ -35,7 +35,8 @@ h4 {
 
 p,
 li,
-strong {
+strong,
+td {
   font-family: font.$f-open-sans;
   font-weight: 400;
   font-style: normal;
@@ -53,7 +54,7 @@ pre {
   font-family: monospace;
   font-size: 1rem;
   background: color.$light-grey;
-  padding: 1rem;
+  padding: 0.5rem;
   width: fit-content;
 }
 
@@ -66,7 +67,7 @@ a {
   }
 
   // Target blank icon
-  &[target="_blank"]:after{
+  &[target="_blank"]:after {
     content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAQElEQVR42qXKwQkAIAxDUUdxtO6/RBQkQZvSi8I/pL4BoGw/XPkh4XigPmsUgh0626AjRsgxHTkUThsG2T/sIlzdTsp52kSS1wAAAABJRU5ErkJggg==);
     margin: 0 3px 0 5px;
   }

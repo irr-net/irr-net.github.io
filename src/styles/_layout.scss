@@ -15,11 +15,9 @@ $spacing-xxl: 5rem;
   position: fixed;
   display: flex;
   flex-direction: column;
-  // align-items: center;
   top: 0px;
   width: min(100vw, 100%);
   height: $spacing-xl;
-  padding-inline: $spacing;
   background-color: color.$transparent-white;
   border-top: 3px solid color.$teal-accent;
   box-shadow: 1px 3px 3px color.$dark-grey;
@@ -30,12 +28,14 @@ $spacing-xxl: 5rem;
     .logo-text {
       font-size: 1.5rem;
       width: fit-content;
+      margin-left: $spacing;
     }
 
     nav {
       display: none;
       text-align: left;
       padding: 0px $spacing;
+      background-color: color.$white;
       transform: scale(1, 0);
       transform-origin: top;
       transition: transform 400ms ease-in-out;
@@ -80,7 +80,6 @@ $spacing-xxl: 5rem;
         border-radius: 2px;
         background-color: color.$mblack;
         position: relative;
-        margin-right: $spacing-l;
       }
 
       span::before,
@@ -102,7 +101,7 @@ $spacing-xxl: 5rem;
 
 // main content
 .content-container {
-  padding-top: $spacing-xxl;
+  padding-top: $spacing-xl;
 
   .inline-margin {
     margin-inline: $spacing;
@@ -110,6 +109,7 @@ $spacing-xxl: 5rem;
   }
 
   .content {
+    padding-inline: $spacing;
     .nav-parent {
       display: none;
     }
@@ -160,6 +160,7 @@ $spacing-xxl: 5rem;
         padding: 0px;
         transform: scale(1, 1);
         transition: none;
+        background-color: transparent;
 
         .nav-menu {
           display: flex;
@@ -192,7 +193,6 @@ $spacing-xxl: 5rem;
   }
 
   .content-container {
-
     .inline-margin {
       margin-inline: $spacing-xl;
       padding-top: $spacing-xl;
@@ -202,6 +202,7 @@ $spacing-xxl: 5rem;
       display: grid;
       grid-template-columns: 225px 1fr;
       grid-gap: 1.5rem;
+      padding-inline: 0rem;
 
       .nav-parent {
         display: block;
