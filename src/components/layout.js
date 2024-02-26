@@ -10,9 +10,8 @@ const Layout = ({ pageTitle, children, isHome }) => {
     <div className="site-wrapper">
       <Header />
       <main
-        className={`content-container ${
-          !isHome && "center-page-width-content"
-        }`}
+        className={`content-container ${!isHome && "center-page-width-content"
+          }`}
       >
         <div className={`${!isHome && "content"}`}>
           <div className="nav-parent">{!isHome && <NavMenu />}</div>
@@ -85,7 +84,13 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-content center-page-width-content">
-        <img className="footer-logo" src={Logo} alt="Merit Logo" />
+        <a
+          href="http://www.merit.edu/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <img className="footer-logo" src={Logo} alt="Merit Logo" />
+        </a>
         <p>
           Merit’s Mission is connecting organizations and building community. We
           provide networking, security and community services to member
