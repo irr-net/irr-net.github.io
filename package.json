@@ -20,6 +20,7 @@
     "gatsby-plugin-image": "^3.13.0",
     "gatsby-plugin-mdx": "^5.13.0",
     "gatsby-plugin-react-helmet": "^6.13.1",
+    "gatsby-plugin-redirect-to": "^1.0.2",
     "gatsby-plugin-sass": "^6.13.0",
     "gatsby-plugin-sharp": "^5.13.0",
     "gatsby-plugin-sitemap": "^6.13.0",

@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import HelmetHeader from "../../components/helmet";
+import HelmetHeader from "../../../components/helmet";
 
 const DocsListPage = () => {
   return (
