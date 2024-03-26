@@ -159,7 +159,7 @@
   {
     "name": "NTTCOM",
     "dns_name": "https://www.gin.ntt.net/support/policy/rr.cfm",
-    "ftp_site": ["ftp://rr1.ntt.net/nttcomRR/"],
+    "ftp_site": ["https://rr1.ntt.net/nttcomRR/"],
     "databases_mirrored": [
       "NTTCOM",
       "LACNIC",
