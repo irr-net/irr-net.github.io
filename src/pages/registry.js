@@ -14,6 +14,9 @@ const RegistryListPage = () => {
             coordinate their Routing Registry efforts by providing mirroring and
             contact information.
           </p>
+          <p>
+            To contribute or request a change to the registry list below, visit the <a href="https://github.com/irr-net/irr-net.github.io" target="_blank" rel="noreferrer">IRR GitHub Page</a>
+          </p>
           {RegistryList.map((registry) => (
             <div key={registry.name} className="registry">
               <h2 id={registry.name}>Registry Name (SOURCE): {registry.name}</h2>
