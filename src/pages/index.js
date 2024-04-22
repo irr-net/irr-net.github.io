@@ -25,7 +25,7 @@ const IndexPage = () => {
               information, and news to this new site.{" "}
             </p>
             <p>
-              This site is operated by <a href="https://www.merit.edu" target="_blank" rel="noreferrer"> Merit Network, Inc. </a> Merit also operates the <a href="https://www.radb.net" target="_blank" rel="noreferrer"> RADB </a> and provides the <a href="https://www.radb.net/support/mirrored_irrs.html" target="_blank" rel="noreferrer" > largest Routing Registry mirror </a> site on the Internet.
+              This site is operated by <a href="https://www.merit.edu" target="_blank" rel="noreferrer"> Merit Network, Inc. </a> Merit also operates the <a href="https://www.radb.net" target="_blank" rel="noreferrer"> RADB </a> and provides the <a href="https://www.radb.net/support/informational/irrs.html" target="_blank" rel="noreferrer" > largest Routing Registry mirror </a> site on the Internet.
             </p></div>
           <div>
             <img src={NetworkGraphic} alt="Network Graphic" />

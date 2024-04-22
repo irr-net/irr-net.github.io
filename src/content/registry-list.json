@@ -25,7 +25,7 @@
     "ftp_site": ["ftp://ftp.apnic.net/pub/apnic/whois/"],
     "databases_mirrored": [],
     "mirror_port_and_info": "whois.apnic.net, port 43",
-    "whois_location": "whois.apnic.netF",
+    "whois_location": "whois.apnic.net",
     "type_of_primary_data": "APNIC member objects",
     "contact_info": "apnic-dbm@apnic.net",
     "noc_info": ["technical@apnic.net"]
@@ -159,7 +159,7 @@
   {
     "name": "NTTCOM",
     "dns_name": "https://www.gin.ntt.net/support/policy/rr.cfm",
-    "ftp_site": ["ftp://rr1.ntt.net/nttcomRR/"],
+    "ftp_site": ["https://rr1.ntt.net/nttcomRR/"],
     "databases_mirrored": [
       "NTTCOM",
       "LACNIC",

@@ -17,7 +17,7 @@ These instructions will get you a copy of the project up and running on your loc
    `git clone https://github.com/merit-network/irr.net.git`
 
 2. Install NPM packages
-   `npm ci --lagacy-peer-deps`
+   `npm ci --legacy-peer-deps`
 
 3. Start the server
    `gatsby develop`
