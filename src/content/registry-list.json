@@ -262,7 +262,7 @@
   {
     "name": "TC",
     "dns_name": "whois.bgp.net.br",
-    "ftp_site": ["ftp://ftp.bgp.net.br/dbase"],
+    "ftp_site": ["ftp://ftp.bgp.net.br/"],
     "databases_mirrored": [
       "ALTDB",
       "AOLTW",
