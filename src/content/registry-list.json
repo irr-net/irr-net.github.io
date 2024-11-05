@@ -200,7 +200,7 @@
   {
     "name": "RADB",
     "dns_name": "whois.radb.net",
-    "ftp_site": ["ftp://ftp.radb.net/radb/dbase"],
+    "ftp_site": ["ftp://ftp.radb.net/radb/dbase/radb.db.gz"],
     "databases_mirrored": [
       "LACN",
       "IC",
