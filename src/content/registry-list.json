@@ -34,7 +34,7 @@
   {
     "name": "ARIN",
     "dns_name": "rr.arin.net",
-    "ftp_site": ["ftp://ftp.arin.net/pub/rr/"],
+    "ftp_site": ["https://ftp.arin.net/pub/rr/"],
     "databases_mirrored": [],
     "mirror_port_and_info": "rr.arin.net, port 43",
     "whois_location": "rr.arin.net",
