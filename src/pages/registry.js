@@ -27,7 +27,7 @@ const RegistryListPage = () => {
                 </tr>
                 {registry.ftp_site &&
                   <tr>
-                    <td>FTP Site:</td>
+                    <td>Download Site:</td>
                     <td>{registry.ftp_site.join(", ")}</td>
                   </tr>}
                 {registry.databases_mirrored &&
