@@ -25,36 +25,40 @@ const RegistryListPage = () => {
                   <td>IP Address or DNS Name:</td>
                   <td>{registry.dns_name}</td>
                 </tr>
-                {registry.ftp_site &&
+                {registry.import_source &&
                   <tr>
-                    <td>Download Site:</td>
-                    <td>{registry.ftp_site.join(", ")}</td>
+                    <td>Import Source:</td>
+                    <td>{registry.import_source.join(", ")}</td>
                   </tr>}
                 {registry.databases_mirrored &&
                   <tr>
                     <td>Databases Mirrored:</td>
                     <td>{registry.databases_mirrored.join(", ")}</td>
                   </tr>}
-                <tr>
-                  <td>Mirror Port and Info:</td>
-                  <td>{registry.mirror_port_and_info}</td>
-                </tr>
-                <tr>
-                  <td>Whois Location:</td>
-                  <td>{registry.whois_location}</td>
-                </tr>
-                <tr>
-                  <td>Type of Primary Data:</td>
-                  <td>{registry.type_of_primary_data}</td>
-                </tr>
-                <tr>
-                  <td>Contact Info:</td>
-                  <td>{registry.contact_info}</td>
-                </tr>
-                <tr>
-                  <td>NOC Info:</td>
-                  <td>{registry.noc_info}</td>
-                </tr>
+                {registry.mirror_port_and_info &&
+                  <tr>
+                    <td>Mirror Port and Info:</td>
+                    <td>{registry.mirror_port_and_info}</td>
+                  </tr>
+                }
+                {registry.whois_location &&
+                  <tr>
+                    <td>Whois Location:</td>
+                    <td>{registry.whois_location}</td>
+                  </tr>
+                }
+                {registry.contact_info &&
+                  <tr>
+                    <td>Contact Info:</td>
+                    <td>{registry.contact_info}</td>
+                  </tr>
+                }
+                {registry.noc_info &&
+                  <tr>
+                    <td>NOC Info:</td>
+                    <td>{registry.noc_info}</td>
+                  </tr>
+                }
               </table>
             </div>
           ))}
