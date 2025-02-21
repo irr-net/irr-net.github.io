@@ -36,7 +36,7 @@ Changes can be made to the list following the json format below:
 {
    "name": "REGISTRY NAME",                                 // Registry Name / Source
    "dns_name": "dns.name",                                  // IP Address or DNS Name
-   "ftp_site": ["list.of","ftp.sites"],                     // FTP Site - list
+   "import_source": ["list.of","ftp.sites", "https.sites"], // Import Source - list
    "databases_mirrored": ["AOLTW, ARIN"],                   // Databases Mirrored - list
    "mirror_port_and_info": "whois.example.io, port 43",     // Mirror Port and Info
    "whois_location": "whois.example.io",                    // Whois Location
