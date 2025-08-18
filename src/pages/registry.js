@@ -5,6 +5,8 @@ import Layout from "../components/layout";
 import RegistryList from "../content/registry-list.json";
 
 const RegistryListPage = () => {
+  // Sort the registry list alphabetically by name
+  const sortedRegistryList = RegistryList.slice().sort((a, b) => a.name.localeCompare(b.name));
   return (
     <Layout pageTitle={"List of Routing Registries"}>
       <div className="content-with-aside">
@@ -17,7 +19,7 @@ const RegistryListPage = () => {
           <p>
             To contribute or request a change to the registry list below, visit the <a href="https://github.com/irr-net/irr-net.github.io" target="_blank" rel="noreferrer">IRR GitHub Page</a>
           </p>
-          {RegistryList.map((registry) => (
+          {sortedRegistryList.map((registry) => (
             <div key={registry.name} className="registry">
               <h2 id={registry.name}>Registry Name (SOURCE): {registry.name}</h2>
               <table>
