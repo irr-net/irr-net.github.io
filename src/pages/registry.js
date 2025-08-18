@@ -89,10 +89,10 @@ const TableOfContent = () => (
           <Link to="#ARIN">ARIN</Link>
         </li>
         <li>
-          <Link to="#BELL">BELL</Link>
+          <Link to="#BBOI">BBOI</Link>
         </li>
         <li>
-          <Link to="#BBOI">BBOI</Link>
+          <Link to="#BELL">BELL</Link>
         </li>
         <li>
           <Link to="#CANARIE">CANARIE</Link>
