@@ -173,8 +173,7 @@
   {
     "name": "PANIX",
     "dns_name": "rrdb.access.net",
-    "import_serial_source": "ftp://rrdb.access.net/PANIX.CURRENTSERIAL",
-    "import_source": ["ftp://rrdb.access.net/panix.db.gz"],
+    "import_source": ["ftp://rrdb.access.net/panix.db.gz", "ftp://rrdb.access.net/PANIX.CURRENTSERIAL"],
     "databases_mirrored": ["RADB"],
     "mirror_port_and_info": "rrdb.access.net, port 43",
     "whois_location": "rrdb.access.net",
