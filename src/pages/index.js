@@ -42,7 +42,7 @@ const IndexPage = () => {
             <p>
               Be sure to read our <Link to="/FAQs"></Link>FAQ if you're wondering
               whether your organization should participate in the IRR. If you have
-              questions about the IRR, please send email to the Merit database team at <a href="mailto:radb@merit.edu" target="_blank" rel="noreferrer">radb@merit.edu</a>
+              questions about the IRR, please send email to the Merit database team at <a href="mailto:support@radb.net" target="_blank" rel="noreferrer">support@radb.net</a>
             </p>
           </div>
           <div>
