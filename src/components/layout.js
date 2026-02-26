@@ -112,7 +112,7 @@ const Footer = () => {
             </p>
             <p>Tel: +1 734 527 5776</p>
             <p>
-              Email: <a href="mailto:support@radb.net">support@radb.net</a>
+              Email: <a href="mailto:radb@merit.edu">radb@merit.edu</a>
             </p>
           </div>
           <div>
