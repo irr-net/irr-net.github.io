@@ -207,8 +207,8 @@
     ],
     "mirror_port_and_info": "whois.radb.net, port 43",
     "whois_location": "whois.radb.net",
-    "contact_info": "radb-support@merit.edu",
-    "noc_info": ["radb-support@merit.edu", "+1-734-527-5776"],
+    "contact_info": "support@radb.net",
+    "noc_info": ["support@radb.net", "+1-734-527-5776"],
     "admin_info": "db-admin@radb.net"
   },
   {
