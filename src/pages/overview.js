@@ -32,8 +32,7 @@ const OverviewPage = () => {
         {`whois -h whois.radb.net AS<Autonomous_System_Number>`}
       </pre>
       <p>
-        You can also obtain IRR data through FTP from <a href=" ftp://ftp.radb.net/radb/dbase" rel="noreferrer">ftp://ftp.radb.net/radb/dbase</a> or access it indirectly through the use of free user{" "}
-        <Link to="/404">resources</Link>.
+        You can also obtain IRR data through FTP from <a href=" ftp://ftp.radb.net/radb/dbase" rel="noreferrer">ftp://ftp.radb.net/radb/dbase</a> or access it indirectly through the use of free user resources.
       </p>
       <h2>IRRToolSet</h2>
       <p>The IRRToolSet is now available from Github at the <a href="https://github.com/irrtoolset/irrtoolset" target="_blank" rel="noreferrer">IRRToolSet project page</a>.</p>
