@@ -205,7 +205,7 @@
       "TC",
       "CANARIE"
     ],
-    "mirror_port_and_info": "whois.radb.net, port 43",
+    "mirror_port_and_info": "nrtm.radb.net, port 43",
     "whois_location": "whois.radb.net",
     "contact_info": "support@radb.net",
     "noc_info": ["support@radb.net", "+1-734-527-5776"],
