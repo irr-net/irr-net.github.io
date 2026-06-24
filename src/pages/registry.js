@@ -58,7 +58,9 @@ const RegistryListPage = () => {
                 {registry.noc_info &&
                   <tr>
                     <td>NOC Info:</td>
-                    <td>{registry.noc_info}</td>
+                    <td>{registry.noc_info.map((info, i) => (
+                      <span key={i}>{info}{i < registry.noc_info.length - 1 && <br />}</span>
+                    ))}</td>
                   </tr>
                 }
               </table>
