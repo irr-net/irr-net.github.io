@@ -58,8 +58,8 @@ const RegistryListPage = () => {
                 {registry.noc_info &&
                   <tr>
                     <td>NOC Info:</td>
-                    <td>{registry.noc_info.map((info, i) => (
-                      <span key={i}>{info}{i < registry.noc_info.length - 1 && <br />}</span>
+                    <td>{(Array.isArray(registry.noc_info) ? registry.noc_info : [registry.noc_info]).map((info, i, arr) => (
+                      <span key={`${i}-${info}`}>{info}{i < arr.length - 1 && <br />}</span>
                     ))}</td>
                   </tr>
                 }
