@@ -102,7 +102,7 @@
   {
     "name": "LEVEL3",
     "dns_name": "rr.Level3.net",
-    "import_source": ["ftp://rr.Level3.net/level3.db.gz"],
+    "import_source": ["https://rrftp.level3.net/level3.db.gz", "https://rrftp.level3.net/LEVEL3.CURRENTSERIAL"],
     "databases_mirrored": [
       "AFRI",
       "NIC",
