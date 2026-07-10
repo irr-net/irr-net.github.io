@@ -223,7 +223,7 @@
   {
     "name": "RIPE",
     "dns_name": "whois.ripe.net",
-    "import_source": ["ftp://ftp.ripe.net/ripe/dbase/"],
+    "import_source": ["https://ftp.ripe.net/ripe/dbase/ripe.db.gz", "https://ftp.ripe.net/ripe/dbase/RIPE.CURRENTSERIAL"],
     "databases_mirrored": [
       "AFRI",
       "NIC",
@@ -233,7 +233,7 @@
       "LACNIC",
       "RADB"
     ],
-    "mirror_port_and_info": "4444, RIPE near real time mirror",
+    "mirror_port_and_info": "whois.ripe.net, port 4444 (NRTMv4)",
     "whois_location": "whois.ripe.net",
     "contact_info": "ripe-dbm@ripe.net",
     "noc_info": ["ops@ripe.net"]
