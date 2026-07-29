@@ -95,9 +95,10 @@
       "https://irr.lacnic.net/lacnic.db.gz",
       "https://irr.lacnic.net/LACNIC.CURRENTSERIAL"
     ],
-    "mirror_port_and_info": "unavailable",
+    "mirror_port_and_info": "irr.lacnic.net, port 43",
     "whois_location": "irr.lacnic.net",
-    "contact_info": "hostmaster@lacnic.net"
+    "contact_info": "hostmaster@lacnic.net", 
+    "noc_info": ["noc@lacnic.net"]
   },
   {
     "name": "LEVEL3",
@@ -203,7 +204,8 @@
       "JPIRR",
       "BBOI",
       "TC",
-      "CANARIE"
+      "CANARIE", 
+      "LACNIC"
     ],
     "mirror_port_and_info": "nrtm.radb.net, port 43",
     "whois_location": "whois.radb.net",
